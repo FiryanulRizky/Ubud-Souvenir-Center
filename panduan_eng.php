@@ -1,5 +1,4 @@
 <?php 
-echo'<script>alert("Coming Soon, Under Producting");</script>';
 echo'<table border=1 style="width:100%;text-align:center;border:1px solid;" >
     <tr>
         <td colspan="2"><H3>DEVELOPER CONTACT</H3></td>
@@ -15,5 +14,8 @@ echo'<table border=1 style="width:100%;text-align:center;border:1px solid;" >
     </tr>
     <tr><td colspan="2">Email : firyan2903@gmail.com<br>HP/WA : 0895606181117</td></tr>
 </table><br>
-<center><b style="color:blue;"><a href='.$_SERVER['PHP_SELF'].'>App Review Guidlines</a></b></center>';
+<center><b style="color:blue;"><form method="post"><input type="submit" name="panduan_btn" value="App Review Guidelines"></form></b></center>';
+if(isset($_POST['panduan_btn'])) {
+	echo'<script>alert("Coming Soon, Under Producting");window.location="'.$_SERVER['PHP_SELF'].'";</script>';
+}
 ?>
