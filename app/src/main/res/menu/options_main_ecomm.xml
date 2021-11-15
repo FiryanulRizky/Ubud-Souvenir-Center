@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/kelogin"
+        android:orderInCategory="100"
+        android:title="Login Admin"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/scan2"
+        android:orderInCategory="100"
+        android:title="QR Scanner"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/contact_developer2"
+        android:orderInCategory="100"
+        android:title="Developer Contact"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/close_main"
+        android:orderInCategory="100"
+        android:title="Close Application"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText" />
+</menu>

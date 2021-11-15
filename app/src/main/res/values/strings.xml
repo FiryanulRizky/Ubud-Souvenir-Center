@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Ubud Souvenir Center v1.0</string>
+    <string name="camera_permission_explanation">The app needs to access your camera to scan the QR code</string>
+    <string name="permission_required_dialog_title">Permissions required</string>
+    <string name="permission_required_dialog_content">App requires camera permission so you can scan QR code</string>
+    <string name="turn_on_flash">Turn on Flash</string>
+    <string name="qr_result_open">Back</string>
+    <string name="qr_result_copy">Copy</string>
+    <string name="qr_result_share">Share</string>
+    <string name="qr_result_scan_another">Access Now</string>
+    <string name="settings_about">Back to Menu</string>
+    <string name="welcome_screen_content">Ubud Souvenir Center Present</string>
+    <string name="welcome_screen_button">Start</string>
+    <string name="author_label">Developed for research purposes ❤ by Firyanul Rizky</string>
+    <string name="menu_donate">Donation</string>
+    <string name="show_on_github">Our Github</string>
+    <string name="open_source_licenses">Open Source Licenses</string>
+    <string name="scan_instructions">scan QR code, press Access Now to redirect target link</string>
+    <string name="ubud_souvenir_center_qr_scanner">UBUD SOUVENIR CENTER QR SCANNER</string>
+    <string name="login_admin">Login Admin</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RiwayatOrder">
+<WebView
+    android:id="@+id/headerriwayatorder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_riwayatorder"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/imgbutton_border"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="KEMBALI"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <WebView
+        android:id="@+id/riwayat_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,7 @@
+Cara untuk Build APK
+1. Build -> Generate Signed Bundle/APK
+2. APK 
+3. Key Store Path, pilih Choose Existing...
+4. Cari destinasi file ubud_souvenir_center.jks
+5. Masukkan key store password dan key password : 123456
+6. key alias : key0

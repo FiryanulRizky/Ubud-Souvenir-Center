@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnalisaJualAmbilData5">
+    <WebView
+        android:id="@+id/headerprosesanalisa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="ScrollViewSize">
+    <Button
+        android:id="@+id/textView29"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/textlines"
+        android:gravity="center"
+        android:text="PROSES ANALISA PENJUALAN"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+     <WebView
+         android:id="@+id/minsup"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"/>
+     <WebView
+        android:id="@+id/ambil_transaksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

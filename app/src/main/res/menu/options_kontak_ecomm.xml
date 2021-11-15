@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/main_menu4"
+        android:orderInCategory="100"
+        android:title="Main Menu"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/scan4"
+        android:orderInCategory="100"
+        android:title="QR Scanner"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/contact_developer4"
+        android:orderInCategory="100"
+        android:title="Developer Contact"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/close_kontak"
+        android:orderInCategory="100"
+        android:title="Close Application"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText" />
+</menu>

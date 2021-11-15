@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MenuAdmin1">
+    <WebView
+        android:id="@+id/headermenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="ScrollViewSize">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/info_toko"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/__shop"
+        android:text="KELOLA INFO TOKO"
+        android:background="@drawable/imgbutton_border"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        tools:ignore="HardcodedText"
+        android:contentDescription="KELOLA INFO TOKO" />
+
+    <TextView
+        android:id="@+id/toko_text"
+        android:layout_width="100dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/info_toko"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="50dp"
+        android:text="Toko"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginStart="50dp"
+        tools:ignore="HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/kelola_produk"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/__daftar_item"
+        android:text="KELOLA PRODUK"
+        android:background="@drawable/imgbutton_border"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toko_text"
+        tools:ignore="HardcodedText"
+        android:contentDescription="KELOLA PRODUK" />
+
+    <TextView
+        android:id="@+id/produk_text"
+        android:layout_width="100dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/kelola_produk"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="50dp"
+        android:text="Produk"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginStart="50dp"
+        tools:ignore="HardcodedText" />
+
+    <WebView
+        android:id="@+id/notif_stok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/kelola_produk"
+        app:layout_constraintBottom_toBottomOf="@id/kelola_produk"
+        android:layout_marginLeft="55dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="55dp" />
+
+    <ImageButton
+        android:id="@+id/btn_transaksi"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/__daftar_transaksi"
+        android:text="KELOLA TRANSAKSI"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/imgbutton_border"
+        app:layout_constraintTop_toBottomOf="@+id/order_text"
+        tools:ignore="HardcodedText"
+        android:contentDescription="KELOLA TRANSAKSI" />
+
+    <TextView
+        android:id="@+id/transaksi_text"
+        android:layout_width="100dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btn_transaksi"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="50dp"
+        android:text="Transaksi"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginEnd="50dp"
+        tools:ignore="HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/btn_analisis"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/__proses_analisa"
+        android:text="ANALISA PENJUALAN"
+        android:background="@drawable/imgbutton_border"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/produk_text"
+        tools:ignore="HardcodedText"
+        android:contentDescription="ANALISA PENJUALAN" />
+
+    <TextView
+        android:id="@+id/analisa_text"
+        android:layout_width="100dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btn_analisis"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="50dp"
+        android:text="Analisa"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginStart="50dp"
+        tools:ignore="HardcodedText" />
+
+    <WebView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logout" />
+
+    <ImageButton
+        android:id="@+id/logout"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/imgbutton_border"
+        android:src="@drawable/logout"
+        android:contentDescription="Logout"
+        tools:ignore="HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/tentang"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/imgbutton_border"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/info"
+        android:layout_marginStart="10dp"
+        android:contentDescription="Tentang"
+        tools:ignore="HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/btn_lihat_analisa"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/imgbutton_border"
+        android:src="@drawable/__lihat_analisa"
+        android:contentDescription="LIHAT ANALISA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transaksi_text"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/visualisasi_text"
+        android:layout_width="100dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btn_lihat_analisa"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="50dp"
+        android:text="Visualisasi"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginEnd="50dp"
+        tools:ignore="HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/btn_order"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/order_masuk"
+        android:contentDescription="ORDER MASUK"
+        android:background="@drawable/imgbutton_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/order_text"
+        android:layout_width="100dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btn_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="50dp"
+        android:text="Order"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginEnd="50dp"
+        tools:ignore="HardcodedText" />
+
+    <WebView
+        android:id="@+id/notif_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_order"
+        app:layout_constraintStart_toStartOf="@+id/btn_order"
+        android:layout_marginStart="1dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
