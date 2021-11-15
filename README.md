@@ -10,8 +10,8 @@ Projek ini telah mendapatkan support dan didanai pemerintah kecamatan Ubud sebag
 
 # Catatan
 - Projek ini adalah projek tugas akhir dan demi melindungi keamanan data dan privasi intelektual, file pemrograman inti yang mengandung proses algoritma tidak disertakan dalam direktori ini,
-- File pemrograman Backend php, javascript, html, css yang diupload pada web server telah dikumpulkan pada satu file public_html
-- File database terdapat pada file database_sql
+- File pemrograman Backend php, javascript, html, css yang diupload pada web server telah dikumpulkan pada satu folder public_html
+- File database terdapat pada folder database_sql
 - Projek telah di hosting dengan domain https://ubud-souvenir-center.my.id.
 - Projek ini dilindungi dari segala bentuk plagiasi, cek sertifikat HAKI disini http://shorturl.at/uIL36.
 - Selengkapnya Cek Panduan Penggunaan Aplikasi disini : http://shorturl.at/stvxH.
