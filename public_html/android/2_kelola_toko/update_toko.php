@@ -90,7 +90,7 @@ echo '<center>
 <tr><td>&raquo;&nbsp;Kunci Akses Toko</td><td>:</td><td><input name="kunci_akses" class="texbox" placeholder="enkripsi('.substr($row['kunci_akses'],0,3).')"></td></tr>
 <tr><td>&raquo;&nbsp;WA/HP Bisnis Akses</td><td>:</td><td><input name="wa" class="texbox" value="'.$row['wa'].'"></td></tr>
 <tr><td>&raquo;&nbsp;Alamat</td><td>:</td><td><input name="alamat" class="texbox" value="'.$row['alamat'].'"></td></tr>
-<tr><td>&raquo;&nbsp;Deskripsi</td><td>:</td><td><textarea name="deskripsi" style="width:100%;" class="ckeditor" rows="7" placeholder="* Untuk editing dengan style, gambar, dll. layaknya Ms. Word, Silahkan Akses dan Login via website ubud-souvenir-center.my.id">'.$row['deskripsi'].'</textarea></td></tr>
+<tr><td>&raquo;&nbsp;Deskripsi</td><td>:</td><td><textarea name="deskripsi" style="width:100%;" class="ckeditor" rows="7" placeholder="* Untuk editing dengan font style, color, sisip gambar, dll. layaknya Ms. Word, Silahkan Akses dan Login via website ubud-souvenir-center.my.id/admin">'.$row['deskripsi'].'</textarea></td></tr>
 <tr><td colspan=3>&raquo;&nbsp;<input type="file" name="gambar_toko" ></br>Gambar Saat ini<br>'.$gambar.'</td></tr>
 <tr><td colspan=3><input type="hidden" name="gambar_toko2" value="'.$row['gambar_toko'].'"></td></tr>
 <tr><td colspan=3 style="text-align:center;"><input type="submit" value="UPDATE" class="btn_submit"><input type="hidden" name="act" value="edit"></td></tr></table></form></center>';
