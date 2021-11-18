@@ -52,7 +52,7 @@ if (mysqli_num_rows($result)>0) {
         <td align='center'><?php echo $gambar;?></td>
         <td><?php echo substr($row['deskripsi'], 0, 25)?>..........</td>
         <td><?php echo format_currency($row['harga']); if ($row['stok']<=5) { ?></td><?php
-        echo "<td style='background:red;text-align:center;'><a href=\"../crud/update_item.php?id=".$row['id_toko']."&id=".$row['id_item']."\"><b style='color:white;'>Refill Stok</b><br> <i class='fa fa-pencil' style='font-size: 20px;color:white;'></i></a><td>";} else {
+        echo "<td style='background:red;text-align:center;'><a href=\"../crud/update_item.php?idtoko=".$row['id_toko']."&id=".$row['id_item']."\"><b style='color:white;'>Refill Stok</b><br> <i class='fa fa-pencil' style='font-size: 20px;color:white;'></i></a><td>";} else {
           echo "<td style='text-align:center;'><a href=\"../crud/update_item.php?idtoko=".$row['id_toko']."&id=".$row['id_item']."\"> <i class='fa fa-pencil' style='font-size: 20px;'></i></a><td>";
             }
                 echo"<td><a href=\"../crud/hapus_item.php?idtoko=".$row['id_toko']."&id=".$row['id_item']."\"><i class='fa fa-eraser' style='font-size: 20px;'></i></a></td>";
