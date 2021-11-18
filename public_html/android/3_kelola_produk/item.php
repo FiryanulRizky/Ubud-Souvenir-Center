@@ -31,7 +31,7 @@ if (mysqli_num_rows($result)>0) {
         <?php echo $gambar;?><br><br>Deskripsi<br>
         <?php echo substr($row['deskripsi'], 0, 100)?>..........
         <?php
-        echo "<td align='center' style='background:red;color:white;'>Refill Stok<br><a href=\"cek_update_item.php?idtoko=".$row['id_toko']."&id=".$row['id_item']."\"> <i class='fa fa-pencil' style='font-size: 20px;color:white;'></i></a><td>";
+        echo "<td align='center' style='background:red;color:white;'>Refill Stok<br><a href=\"update_item.php?idtoko=".$row['id_toko']."&id=".$row['id_item']."\"> <i class='fa fa-pencil' style='font-size: 20px;color:white;'></i></a><td>";
                 echo"<a href=\"konfirmasi_hapus_item.php?idtoko=".$row['id_toko']."&id=".$row['id_item']."\"><i class='fa fa-eraser' style='font-size: 20px;'></i></a></td>";
       
       echo "</tr>";
@@ -48,7 +48,7 @@ if (mysqli_num_rows($result)>0) {
         <?php echo $gambar;?><br><br>Deskripsi<br>
         <?php echo substr($row['deskripsi'], 0, 100)?>..........
         <?php
-        echo "<td><a href=\"update_item.php?id=".$row['id_item']."\"> <i class='fa fa-pencil' style='font-size: 20px;'></i></a><td>";
+        echo "<td><a href=\"update_item.php?idtoko=".$row['id_toko']."&id=".$row['id_item']."\"> <i class='fa fa-pencil' style='font-size: 20px;'></i></a><td>";
                 echo"<a href=\"konfirmasi_hapus_item.php?id=".$row['id_item']."\"><i class='fa fa-eraser' style='font-size: 20px;'></i></a></td>";
       
       echo "</tr>"; }
