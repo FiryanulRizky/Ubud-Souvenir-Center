@@ -103,7 +103,7 @@ echo'<table style="border:1px solid;">';
 				<div class="circle_merah"><H2>M</H2><?php echo "<h3>membeli $persensupport</h3>"?></div>
 			<?php } ?> <?php
 			$MerkItem2=mysqli_query($conn,"SELECT * FROM item WHERE kditem='$C2kditem2' ");
-			$DataMerkItem2=mysqli_fetch_array($MerkItem2,MYSQLI_ASSOC); ?><div class="circle_2itemkanan"><?php echo "[".$DataMerkItem2['kditem']."]"."<br><img src='../../gambar/produk/".$DataMerkItem2['gambar_item']."'><br>".$DataMerkItem2['merk'].",";?></div></div> <?php
+			$DataMerkItem2=mysqli_fetch_array($MerkItem2,MYSQLI_ASSOC); ?></div> <?php
 			//sebaliknya
 			$MerkItem2=mysqli_query($conn,"SELECT * FROM item WHERE id_toko='$idtoko' AND kditem='$C2kditem2' ");
 			$DataMerkItem2=mysqli_fetch_array($MerkItem2,MYSQLI_ASSOC);?><div id="circle_2kiri_r"><div class="circle_2itemkiri_r"> <?php echo "[".$DataMerkItem2['kditem']."]"."<br><img src='../../gambar/produk/".$DataMerkItem2['gambar_item']."'><br>".$DataMerkItem2['merk'].",";?><br><br><br><hr></div><?php
