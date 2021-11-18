@@ -105,7 +105,7 @@ while ($rowcat=@mysqli_fetch_array($rcat,MYSQLI_ASSOC)){
 </select> </td><td align="left"> | <a href="kelola_kategori.php"><input type="button" value="Kelola Kategori" style="padding:5px;"></a></td></tr>
 <tr><td colspan="2"><br>&laquo;&nbsp;Input Gambar : &laquo;&nbsp;<br><input type="file" accept='image/*' multiple='multiple' capture='camera' name="gambar_item" class="texbox" style="width:100%;"></td></tr>
 <tr><td colspan="2"><br>&laquo;&nbsp;Harga : &laquo;&nbsp;<br><input name="harga" id="harga" class="texbox" placeholder="wajib diisi" maxlength="9"></td></tr>
-<tr><td colspan="2"><br>&laquo;&nbsp;Deskripsi : &laquo;&nbsp;<br><textarea class="ckeditor" style="width:100%;" rows="7" name="deskripsi"></textarea></td></tr>
+<tr><td colspan="2"><br>&laquo;&nbsp;Deskripsi : &laquo;&nbsp;<br><textarea class="ckeditor" style="width:100%;" rows="7" name="deskripsi" placeholder="* Untuk editing dengan font style, color, sisip gambar, dll. layaknya Ms. Word, Silahkan Akses dan Login via website ubud-souvenir-center.my.id/admin"></textarea></td></tr>
 <tr><td colspan="2"><br>&laquo;&nbsp;Stok : &laquo;&nbsp;<br><input name="stok" id="stok" class="texbox" placeholder="wajib diisi" maxlength="4"></td></tr></table></center>
 <center><br><input type="submit" value="SIMPAN" class="btn_submit">
     <input type="hidden" name="act" value="add">
