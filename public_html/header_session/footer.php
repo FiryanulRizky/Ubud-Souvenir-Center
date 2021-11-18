@@ -1,12 +1,7 @@
-
 <div class="cleared"></div>
 </div><!-- id="wrapper" -->
 <div id="footer">
-
     <div class="cleared"></div><br>
-
-
-
 </div><!-- footer -->
  <style>
 #find{
@@ -15,8 +10,6 @@
     height:122px;
     width:100%;
     padding-top:10px;
-	
-   
 }
 #top{
     margin-left:4px;
@@ -25,12 +18,9 @@
     float:left;
 
 }
-
-
 </style>
 <div id="find">
 <center>
-Copyright &#169; <script type='text/javascript'>var creditsyear = new Date();document.write(creditsyear.getFullYear());</script>&nbsp Developed & Maintenance by <a href='../panduan_admin.php' style="color: lightblue;">Firyanul Rizky</a>
+Copyright &#169; <script type='text/javascript'>var creditsyear = new Date();document.write(creditsyear.getFullYear());</script>&nbsp Developed & Maintenance by <a href='../panduan_eng.php' style="color: lightblue;">Firyanul Rizky</a>
 </center>
 </div>
-
