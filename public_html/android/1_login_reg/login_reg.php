@@ -195,7 +195,7 @@ $namatoko2=mysqli_fetch_array($namatoko,MYSQLI_ASSOC);
 
 $namatoko3=$namatoko2['nama_toko'];
 
-$namadmin=mysqli_query($conn,"SELECT nama FROM admin_web WHERE id_toko='$idtoko'");
+$namadmin=mysqli_query($conn,"SELECT nama FROM admin_web WHERE id_toko='$idtoko' AND username='$username'");
 
 $namadmin2=mysqli_fetch_array($namadmin,MYSQLI_ASSOC);
 
@@ -224,10 +224,3 @@ $namadmin3=$namadmin2['nama'];
 }
 
 ?></center></div></div>
-
-
-
-
-
-
-
