@@ -99,7 +99,7 @@ elseif (isset($_POST['awal'])&&$status_toko!="in Trouble" || isset($_POST['libur
 }
             echo "<center><img src='../gambar/toko/".$data['gambar_toko']."' width='500' height='250'></center><br>";
 
-echo"<p>Halo <h3>".$row['nama']."</h3> Selamat bekerja sebagai admin.</p>";
+echo"<p>Halo <b>".$row['nama']."</b>,<br> Selamat bekerja sebagai admin.</p>";
 echo'<p>Silahkan klik menu pilihan yang berada diatas untuk mengelola konten website ini.</p>';
 
              echo'<p>Data Pribadi Anda Adalah : </p><br>';
