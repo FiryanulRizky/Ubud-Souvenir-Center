@@ -58,7 +58,7 @@ if (mysqli_num_rows($cek)>0) {
  $date2 = $_POST['date2'];
     if (!empty($date1) && !empty($date2)) {
   // perintah tampil data berdasarkan range tanggal
-  $result = mysqli_query($conn,"SELECT * FROM transaksi WHERE id_toko='$idtoko' AND tgltransaksi BETWEEN '$date1' AND '$date2' GROUP BY kdtransaksi ORDER BY id_item DESC");
+  $result = mysqli_query($conn,"SELECT * FROM transaksi WHERE id_toko='$idtoko' AND tgltransaksi BETWEEN '$date1' AND '$date2' GROUP BY kdtransaksi");
 
   echo"<br><br>Data ditampilkan dari rentang tanggal "; echo date('d-M-Y', strtotime($date1)); echo " sampai "; echo date('d-M-Y', strtotime($date2)); echo "<br><br>";
  } else {
