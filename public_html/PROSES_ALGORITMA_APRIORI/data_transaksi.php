@@ -60,7 +60,7 @@ if (mysqli_num_rows($cek)>0) {
   // perintah tampil data berdasarkan range tanggal
   $result = mysqli_query($conn,"SELECT * FROM transaksi WHERE id_toko='$idtoko' AND tgltransaksi BETWEEN '$date1' AND '$date2' GROUP BY kdtransaksi");
 
-  echo"<br><br>Data ditampilkan dari rentang tanggal "; echo date('d-M-Y', strtotime($date1)); echo " sampai "; echo date('d-M-Y', strtotime($date2)); echo "<br><a href='data_transaksi.php?clear=y'><button style='color:white;background:red;padding:5px;'>Hapus Filter</button></a><br><br>";
+  echo"<br><br>Data ditampilkan dari rentang tanggal "; echo date('d-M-Y', strtotime($date1)); echo " sampai "; echo date('d-M-Y', strtotime($date2)); echo "<br><br><a href='data_transaksi.php?clear=y'><button style='color:white;background:red;padding:5px;'>Hapus Filter</button></a><br><br>";
  } else {
   // perintah tampil semua data
   $result = mysqli_query($conn,"SELECT * FROM transaksi WHERE id_toko='$idtoko' GROUP BY kdtransaksi ORDER BY id_transaksi DESC"); 
