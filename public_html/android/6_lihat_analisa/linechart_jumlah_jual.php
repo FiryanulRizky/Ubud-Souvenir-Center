@@ -62,7 +62,7 @@ $produk12=mysqli_query($conn,"SELECT * FROM graph WHERE id_toko='$idtoko' ORDER 
     </style>
   </head>
   <body style="background:#DFE6F0;">
-    <?php ob_start(); include"tangkap_data_cpm.php"; ob_end_clean(); ?>
+    <?php ob_start(); include"tangkap_data_ipm.php"; ob_end_clean(); ?>
     <br><center><a href="iframe_graph.php"><H3>RIWAYAT ITEM TERJUAL</H3></a>
     <table width="100%" height="40" style="text-align: center; border-bottom: 1px solid red; font-weight: bold; font-size: 14px;"><tr><td><?php echo "terjual/bulan : ".ceil($rerata_item);?></td><td><?php echo "total terjual: ".$jumlah_item;?></td></tr></table>
     </center>
