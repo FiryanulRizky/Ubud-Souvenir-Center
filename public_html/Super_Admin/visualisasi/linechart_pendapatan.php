@@ -4,47 +4,48 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 session_start();
 include"../../db/koneksi.php";
 
+$idtoko=$_GET['idtoko'];
 $jumlah_cek=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko = '".$_GET['idtoko']."'");
 $cek=mysqli_query($conn,"SELECT SUM(Januari) AS total FROM pendapatan WHERE id_toko = '".$_GET['idtoko']."'");
 $ambil_cek=mysqli_fetch_array($cek);
 $cek2=$ambil_cek['total'];
   if(mysqli_num_rows($jumlah_cek)>0 && $cek>0) {
 
-$jan=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='1' AND id_toko='".$_GET['idtoko']."'");
-$produk1=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='1' AND id_toko='".$_GET['idtoko']."'");
+$jan=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 0,1");
+$produk1=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 0,1");
 
-$feb=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='2' AND id_toko='".$_GET['idtoko']."'");
-$produk2=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='2' AND id_toko='".$_GET['idtoko']."'");
+$feb=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 1,1");
+$produk2=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 1,1");
 
-$mar=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='3' AND id_toko='".$_GET['idtoko']."'");
-$produk3=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='3' AND id_toko='".$_GET['idtoko']."'");
+$mar=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 2,1");
+$produk3=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 2,1");
 
-$apr=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='4' AND id_toko='".$_GET['idtoko']."'");
-$produk4=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='4' AND id_toko='".$_GET['idtoko']."'");
+$apr=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 3,1");
+$produk4=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 3,1");
 
-$mei=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='5' AND id_toko='".$_GET['idtoko']."'");
-$produk5=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='5' AND id_toko='".$_GET['idtoko']."'");
+$mei=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 4,1");
+$produk5=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 4,1");
 
-$jun=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='6' AND id_toko='".$_GET['idtoko']."'");
-$produk6=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='6' AND id_toko='".$_GET['idtoko']."'");
+$jun=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 5,1");
+$produk6=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 5,1");
 
-$jul=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='7' AND id_toko='".$_GET['idtoko']."'");
-$produk7=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='7' AND id_toko='".$_GET['idtoko']."'");
+$jul=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 6,1");
+$produk7=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 6,1");
 
-$aug=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='8' AND id_toko='".$_GET['idtoko']."'");
-$produk8=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='8' AND id_toko='".$_GET['idtoko']."'");
+$aug=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 7,1");
+$produk8=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 7,1");
 
-$sep=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='9' AND id_toko='".$_GET['idtoko']."'");
-$produk9=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='9' AND id_toko='".$_GET['idtoko']."'");
+$sep=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 8,1");
+$produk9=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 8,1");
 
-$okt=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='10' AND id_toko='".$_GET['idtoko']."'");
-$produk10=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='10' AND id_toko='".$_GET['idtoko']."'");
+$okt=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 9,1");
+$produk10=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 9,1");
 
-$nov=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='11' AND id_toko='".$_GET['idtoko']."'");
-$produk11=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='11' AND id_toko='".$_GET['idtoko']."'");
+$nov=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 10,1");
+$produk11=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 10,1");
 
-$des=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='12' AND id_toko='".$_GET['idtoko']."'");
-$produk12=mysqli_query($conn,"SELECT * FROM pendapatan WHERE kditem='12' AND id_toko='".$_GET['idtoko']."'");
+$des=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 11,1");
+$produk12=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' ORDER BY id_hasil ASC LIMIT 11,1");
 
 ?>
 
