@@ -68,7 +68,7 @@ $produk12=mysqli_query($conn,"SELECT * FROM pendapatan WHERE id_toko='$idtoko' O
   $ambil_nama=mysqli_fetch_array($q_nama);
   $nama_toko=$ambil_nama['nama_toko'];
   ?>
-    <br><center><a href="linechart_jumlah_jual.php"><H1>Riwayat Pendapatan <?php echo $nama_toko;?></H1></a></center>
+    <br><center><H1>Riwayat Pendapatan <?php echo $nama_toko;?></H1></center>
     <div class="container">
         <canvas id="linechart" width="100" height="100"></canvas>
     </div>
