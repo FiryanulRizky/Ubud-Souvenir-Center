@@ -12,7 +12,7 @@ include"./header_session/sidebar_index.php";
 ob_start();
 include"./android/8_panel_penjualan/cart.php";
 ob_end_clean();
-unset($_SESSION[cart]);
+unset($_SESSION['cart']);
 
 // *** MENGHAPUS SESSION SEARCH / RESETING
 if ($_POST['clear']=="y"){ unset($_SESSION['scari']); unset($_SESSION['scategory']);
