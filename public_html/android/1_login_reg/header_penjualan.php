@@ -25,16 +25,11 @@ date_default_timezone_set('Asia/Makassar');
 <link href="../css/style_penjualan.css" rel="stylesheet" type="text/css" media="screen" />
 <link rel="stylesheet" href="../css/style_admin.css">
 
-
 <!-- Start Slider HEAD section --> <!-- add to the <head> of your page -->
 	<link rel="stylesheet" type="text/css" href="../../css/style_guest_header.css" />
 	<script type="text/javascript" src="../../js/jquery_penjualan.js"></script>
 	<!-- End Slider.com HEAD section -->
 
-
-
-
-	
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -43,8 +38,6 @@ date_default_timezone_set('Asia/Makassar');
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-
-
 
 <style>
 #bgmenu{
@@ -56,23 +49,22 @@ date_default_timezone_set('Asia/Makassar');
 
 </style>
 
-
 <div id="header"><!--start header-->
 
 <div id="header_content">	<!--start header conteent-->
 	<ul>
-	
+
 	  <li><?php echo"<a href=\"index.php?idtoko=".$_GET['idtoko']."&clear=y\"><img src=\"../../gambar/images/logo.png\"></a></li><li>";
 		  echo'<form method="post" action="index.php?idtoko='.$_GET['idtoko'].'">
 			     <input class="btncari" type="submit" value=""><input class="texbox_cari" name="cari" value="'.$_SESSION['scari'].'" placeholder="  Type Here to Search" >
 			   </form>';
 	   ?></li>
-	   
+
 	<li><?php include"../8_panel_penjualan/cart.php";?></li>
 
 	<li><form method="post"><input type="submit" value="Back to Main" name="ke_main" style="font-size:24px;background:white;margin-top:12px;border:1px solid orange;padding:10px;"></form></li>
 
-   </ul>  
+   </ul>
 </div><!--End header conteent-->
 
 <?php
@@ -89,13 +81,11 @@ if(isset($_POST['ke_main'])) {
     </script>';
     }
     else {
-        header("Location : ../../index.php?clear=y");
+        echo'<script>window.location = "../../index.php?clear=y";</script>';
     }
 }
-?>   
+?>
 
-
-	 
      </div><!--end header-->
 
 <div id="container"><!--start container-->
