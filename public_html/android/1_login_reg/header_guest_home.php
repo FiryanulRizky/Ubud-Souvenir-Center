@@ -26,16 +26,11 @@ date_default_timezone_set('Asia/Makassar');
 
 <link rel="stylesheet" href="../css/style_admin.css">
 
-
 <!-- Start Slider HEAD section --> <!-- add to the <head> of your page -->
 	<link rel="stylesheet" type="text/css" href="../../css/style_guest_header.css" />
 	<script type="text/javascript" src="../../js/penjualan/jquery_penjualan.js"></script>
 	<!-- End Slider.com HEAD section -->
 
-
-
-
-	
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -44,8 +39,6 @@ date_default_timezone_set('Asia/Makassar');
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-
-
 
 <style>
 #bgmenu{
@@ -66,24 +59,19 @@ date_default_timezone_set('Asia/Makassar');
 <!--</div>-->
 <!--</div>-->
 
-
 <div id="header"><!--start header-->
 
 <div id="header_content">	<!--start header conteent-->
 	<ul>
-	
 	  <li><a href="../../index.php?clear=y"><img src="../../gambar/images/logo.png"></a></li>
 	  <li> <?php
-		  echo'<form method="post" action="../7_panel_guest/home.php">
+		  echo'<form method="post" action="../../index.php">
 			     <input class="btncari" type="submit" value=""><input class="texbox_cari" name="cari" value="'.$_SESSION['scari'].'" placeholder="  Type Here to Search" >
 			   </form>';
 	   ?></li><li style="margin-top:15px;font-size:24px;border:1px solid orange;padding:10px;"><a href="../7_panel_guest/cara_belanja_home.php"><i class="fa fa-pencil-square-o"></i> How to Order</a></li>
-   </ul>  
+   </ul>
 </div><!--End header conteent-->
-   
 
-
-	 
      </div><!--end header-->
 
 <div id="container"><!--start container-->
