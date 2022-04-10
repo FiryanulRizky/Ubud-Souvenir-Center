@@ -10,9 +10,10 @@ Skripsi Penelitian (Implementasi Algoritma Apriori)
 - Projek ini adalah projek tugas akhir dan demi melindungi keamanan data dan privasi intelektual, file pemrograman inti yang mengandung proses algoritma tidak disertakan dalam direktori ini,
 - File pemrograman Backend php, javascript, html, css yang diupload pada web server telah dikumpulkan pada satu folder public_html
 - File database terdapat pada folder database_sql
+- File koneksi database, terdapat di /db/koneksi.php, dan /generator_qrcode/config.php.
 - Projek telah di hosting dengan domain https://ubud-souvenir-center.my.id.
 - Projek ini dilindungi dari segala bentuk plagiasi, cek sertifikat HAKI disini http://shorturl.at/uIL36.
-- Selengkapnya Cek Panduan Penggunaan Aplikasi disini : http://shorturl.at/stvxH.
+- Selengkapnya Cek Panduan Penggunaan Aplikasi disini : http://shorturl.at/bxM56.
 - Disediakan aktivitas Demo/Tester untuk mencoba segala fitur yang ada pada aplikasi, 
 Silahkan baca panduan aplikasi pada link diatas, unduh aplikasi, dan jalankan aplikasi sebagai administrator.
   - Pilih Toko : Tester Projek (KDTK32)
@@ -78,7 +79,7 @@ Aplikasi dibuat dengan model hybrid (Android SDK 19 (KitKat)- SDK 31 (Android 12
 
 ![15](https://user-images.githubusercontent.com/60762912/139584627-27395ce3-b87f-416c-85db-5eff953823c2.jpg)
 
-![16](https://user-images.githubusercontent.com/60762912/139584632-581a0114-9bb4-4833-b1ca-9e4b199790f9.jpg)
+![Capture](https://user-images.githubusercontent.com/60762912/162620022-fe145729-c5a6-4d72-884c-18ca566b045f.PNG)
 
 ![17](https://user-images.githubusercontent.com/60762912/139584639-930a27d2-8d61-4ffc-a337-c07e9839ceef.jpg)
 
