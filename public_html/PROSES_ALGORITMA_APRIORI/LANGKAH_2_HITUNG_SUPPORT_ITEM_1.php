@@ -6,6 +6,7 @@
 <body>
 <?php
 include"../header_session/header_inner.php";
+mysqli_query($conn,"DELETE FROM statistik WHERE id_toko='$idtoko'");
 ?>
 <div id="bgkonten">
 <center><div class="konten_tabel">
@@ -25,23 +26,22 @@ include"../header_session/header_inner.php";
      <label for="date2">sampai </label>
      <input type="date" name="date2" id="date2" class="form-control mr-2">
      <button type="submit" name="submit2" id="submit2" class="btn btn-primary">Cari</button>
-    </form><hr><?php 
-    
-    
+    </form><hr><?php
+
     if(isset($_POST['pola_2_semua'])) {
         $tanggal = date("Ymd");
-            $waktu   = date("His"); 
+            $waktu   = date("His");
             $cek_admin=mysqli_query($conn,"SELECT * FROM statistik WHERE id_toko='$idtoko' AND tanggal='$tanggal'");
-            while($ambil_ip=mysqli_fetch_array($cek_admin)){ 
+            while($ambil_ip=mysqli_fetch_array($cek_admin)){
                 $cek_ip=$ambil_ip['ip'];
             }
-            if($cek_ip>1){ 
+            if($cek_ip>1){
             echo '<script>alert("Proses Apriori Sedang dalam sesi admin lain");window.location="LANGKAH_2_HITUNG_SUPPORT_ITEM_1.php";</script>';
             } else {
           $ip = $_SERVER['REMOTE_ADDR'];
 $tanggal = date("Ymd");
 $waktu   = date("His");
-$status="admin"; 
+$status="admin";
 $s = mysqli_query($conn,"SELECT * FROM statistik WHERE ip='$ip' AND tanggal='$tanggal' AND id_toko='$idtoko'");
 $ambil_data_ip=mysqli_fetch_array($s);
 $ambil_ip=$ambil_data_ip['ip'];
@@ -49,22 +49,22 @@ if(mysqli_num_rows($s) == 0 && $ambil_ip != $ip){
   mysqli_query($conn,"INSERT INTO statistik(id_toko, ip, tanggal, online, status) VALUES('$idtoko','$ip','$tanggal','$waktu','$status')");} 
       else {
         mysqli_query($conn,"UPDATE statistik SET online='$waktu', status='$status' WHERE ip='$ip' AND tanggal='$tanggal' AND id_toko='$idtoko'");
-      } 
+      }
         echo'<script>window.location="../PROSES_ALGORITMA_APRIORI/LANGKAH_3_KANDIDAT_ITEM_2.php";</script>'; }
     } elseif(isset($_POST['pola_3_semua'])) {
         $tanggal = date("Ymd");
-            $waktu   = date("His"); 
+            $waktu   = date("His");
             $cek_admin=mysqli_query($conn,"SELECT * FROM statistik WHERE id_toko='$idtoko' AND tanggal='$tanggal'");
-            while($ambil_ip=mysqli_fetch_array($cek_admin)){ 
+            while($ambil_ip=mysqli_fetch_array($cek_admin)){
                 $cek_ip=$ambil_ip['ip'];
             }
-            if($cek_ip>1){ 
+            if($cek_ip>1){
             echo '<script>alert("Proses Apriori Sedang dalam sesi admin lain");window.location="LANGKAH_2_HITUNG_SUPPORT_ITEM_1.php";</script>';
             } else {
           $ip = $_SERVER['REMOTE_ADDR'];
 $tanggal = date("Ymd");
 $waktu   = date("His");
-$status="admin"; 
+$status="admin";
 $s = mysqli_query($conn,"SELECT * FROM statistik WHERE ip='$ip' AND tanggal='$tanggal' AND id_toko='$idtoko'");
 $ambil_data_ip=mysqli_fetch_array($s);
 $ambil_ip=$ambil_data_ip['ip'];
@@ -75,9 +75,7 @@ if(mysqli_num_rows($s) == 0 && $ambil_ip != $ip){
       }
          echo'<script>window.location="../PROSES_ALGORITMA_APRIORI/LANGKAH_7_KANDIDAT_ITEM_3.php";</script>'; }
     }
-    
-    
-    } ?>
+  } ?>
 <table border="1" align="left" cellpadding="0" cellspacing="2" style="border:thin; border-color:#399; padding-left:3px; margin-top:5px;">
 <tr >
   <td colspan="3" style="background-color:lightgrey; text-align: center; font-size: 18px; font-weight: bold;">Pola Transaksi Penjualan
@@ -120,21 +118,20 @@ if(mysqli_num_rows($s) == 0 && $ambil_ip != $ip){
 <form method='post'><input type='submit' name='pola_3_tgl1' value='Proses 3 Itemset' style='padding:3px 6px 3px 6px; border:1px solid #06F; font-size: 21px;'></form>
 <a style='padding:3px 6px 3px 6px; border:1px solid #06F; font-size: 18px;'  href=\"LANGKAH_2_HITUNG_SUPPORT_ITEM_1.php?clear=y\">Reset</a></center><hr>";
 
-
 if(isset($_POST['pola_2_tgl1'])) {
     $tanggal = date("Ymd");
-            $waktu   = date("His"); 
+            $waktu   = date("His");
             $cek_admin=mysqli_query($conn,"SELECT * FROM statistik WHERE id_toko='$idtoko' AND tanggal='$tanggal'");
-            while($ambil_ip=mysqli_fetch_array($cek_admin)){ 
+            while($ambil_ip=mysqli_fetch_array($cek_admin)){
                 $cek_ip=$ambil_ip['ip'];
             }
-            if($cek_ip>1){ 
+            if($cek_ip>1){
             echo '<script>alert("Proses Apriori Sedang dalam sesi admin lain");window.location="LANGKAH_2_HITUNG_SUPPORT_ITEM_1.php?date1='.$date1.'&date2='.$date2.'";</script>';
             } else {
           $ip = $_SERVER['REMOTE_ADDR'];
 $tanggal = date("Ymd");
 $waktu   = date("His");
-$status="admin"; 
+$status="admin";
 $s = mysqli_query($conn,"SELECT * FROM statistik WHERE ip='$ip' AND tanggal='$tanggal' AND id_toko='$idtoko'");
 $ambil_data_ip=mysqli_fetch_array($s);
 $ambil_ip=$ambil_data_ip['ip'];
@@ -146,18 +143,18 @@ if(mysqli_num_rows($s) == 0 && $ambil_ip != $ip){
         echo'<script>window.location="LANGKAH_3_KANDIDAT_ITEM_2.php?date1='.$date1.'&date2='.$date2.'";</script>'; }
     } elseif(isset($_POST['pola_3_tgl1'])) {
         $tanggal = date("Ymd");
-            $waktu   = date("His"); 
+            $waktu   = date("His");
             $cek_admin=mysqli_query($conn,"SELECT * FROM statistik WHERE id_toko='$idtoko' AND tanggal='$tanggal'");
-            while($ambil_ip=mysqli_fetch_array($cek_admin)){ 
+            while($ambil_ip=mysqli_fetch_array($cek_admin)){
                 $cek_ip=$ambil_ip['ip'];
             }
-            if($cek_ip>1){ 
+            if($cek_ip>1){
             echo '<script>alert("Proses Apriori Sedang dalam sesi admin lain");window.location="LANGKAH_2_HITUNG_SUPPORT_ITEM_1.php?date1='.$date1.'&date2='.$date2.'";</script>';
             } else {
           $ip = $_SERVER['REMOTE_ADDR'];
 $tanggal = date("Ymd");
 $waktu   = date("His");
-$status="admin"; 
+$status="admin";
 $s = mysqli_query($conn,"SELECT * FROM statistik WHERE ip='$ip' AND tanggal='$tanggal' AND id_toko='$idtoko'");
 $ambil_data_ip=mysqli_fetch_array($s);
 $ambil_ip=$ambil_data_ip['ip'];
@@ -169,12 +166,11 @@ if(mysqli_num_rows($s) == 0 && $ambil_ip != $ip){
          echo'<script>window.location="LANGKAH_7_KANDIDAT_ITEM_3.php?date1='.$date1.'&date2='.$date2.'";</script>'; }
     }
 
-
  }  else {
   // perintah tampil semua data
   $result = mysqli_query($conn,"SELECT * FROM transaksi WHERE id_toko='$idtoko' GROUP BY kdtransaksi ORDER BY id_transaksi DESC"); 
  }
-} 
+}
 
 if (!empty($date3) && !empty($date4)) {
   // perintah tampil data berdasarkan range tanggal
@@ -184,22 +180,21 @@ if (!empty($date3) && !empty($date4)) {
 <form method='post'><input type='submit' name='pola_2_tgl2' value='Proses 2 Itemset' style='padding:3px 6px 3px 6px; border:1px solid #06F; font-size: 21px;'></form>
 <form method='post'><input type='submit' name='pola_3_tgl2' value='Proses 3 Itemset' style='padding:3px 6px 3px 6px; border:1px solid #06F; font-size: 21px;'></form>
 <a style='padding:3px 6px 3px 6px; border:1px solid #06F; font-size: 18px;''  href=\"LANGKAH_2_HITUNG_SUPPORT_ITEM_1.php?clear=y\">Reset</a></center><hr>";
- 
-    
+
     if(isset($_POST['pola_2_tgl2'])) {
         $tanggal = date("Ymd");
-            $waktu   = date("His"); 
+            $waktu   = date("His");
             $cek_admin=mysqli_query($conn,"SELECT * FROM statistik WHERE id_toko='$idtoko' AND tanggal='$tanggal'");
-            while($ambil_ip=mysqli_fetch_array($cek_admin)){ 
+            while($ambil_ip=mysqli_fetch_array($cek_admin)){
                 $cek_ip=$ambil_ip['ip'];
             }
-            if($cek_ip>1){ 
+            if($cek_ip>1){
             echo '<script>alert("Proses Apriori Sedang dalam sesi admin lain");window.location="LANGKAH_2_HITUNG_SUPPORT_ITEM_1.php?date1='.$date3.'&date2='.$date4.'";</script>';
             } else {
           $ip = $_SERVER['REMOTE_ADDR'];
 $tanggal = date("Ymd");
 $waktu   = date("His");
-$status="admin"; 
+$status="admin";
 $s = mysqli_query($conn,"SELECT * FROM statistik WHERE ip='$ip' AND tanggal='$tanggal' AND id_toko='$idtoko'");
 $ambil_data_ip=mysqli_fetch_array($s);
 $ambil_ip=$ambil_data_ip['ip'];
@@ -211,18 +206,18 @@ if(mysqli_num_rows($s) == 0 && $ambil_ip != $ip){
         echo'<script>window.location="LANGKAH_3_KANDIDAT_ITEM_2.php?date1='.$date3.'&date2='.$date4.'";</script>'; }
     } elseif(isset($_POST['pola_3_tgl2'])) {
         $tanggal = date("Ymd");
-            $waktu   = date("His"); 
+            $waktu   = date("His");
             $cek_admin=mysqli_query($conn,"SELECT * FROM statistik WHERE id_toko='$idtoko' AND tanggal='$tanggal'");
-            while($ambil_ip=mysqli_fetch_array($cek_admin)){ 
+            while($ambil_ip=mysqli_fetch_array($cek_admin)){
                 $cek_ip=$ambil_ip['ip'];
             }
-            if($cek_ip>1){ 
+            if($cek_ip>1){
             echo '<script>alert("Proses Apriori Sedang dalam sesi admin lain");window.location="LANGKAH_2_HITUNG_SUPPORT_ITEM_1.php?date1='.$date3.'&date2='.$date4.'";</script>';
             } else {
           $ip = $_SERVER['REMOTE_ADDR'];
 $tanggal = date("Ymd");
 $waktu   = date("His");
-$status="admin"; 
+$status="admin";
 $s = mysqli_query($conn,"SELECT * FROM statistik WHERE ip='$ip' AND tanggal='$tanggal' AND id_toko='$idtoko'");
 $ambil_data_ip=mysqli_fetch_array($s);
 $ambil_ip=$ambil_data_ip['ip'];
@@ -233,10 +228,7 @@ if(mysqli_num_rows($s) == 0 && $ambil_ip != $ip){
       }
          echo'<script>window.location="LANGKAH_7_KANDIDAT_ITEM_3.php?date1='.$date3.'&date2='.$date4.'";</script>'; }
     }
-    
-    
 }
-
 
 else {
  // perintah tampil semua data
@@ -287,7 +279,7 @@ else {
 	  	$qryTotalItem1 = mysqli_query($conn,"SELECT * FROM transaksi WHERE id_toko ='$idtoko' AND tgltransaksi BETWEEN '$date1' AND '$date2' GROUP BY kdtransaksi ORDER BY kdtransaksi ASC"); } elseif (!empty($date3&&$date4)) {
 	  		$qryTotalItem1 = mysqli_query($conn,"SELECT * FROM transaksi WHERE id_toko ='$idtoko' AND tgltransaksi BETWEEN '$date3' AND '$date4' GROUP BY kdtransaksi ORDER BY kdtransaksi ASC"); } else {
 	  		$qryTotalItem1 = mysqli_query($conn,"SELECT * FROM transaksi WHERE id_toko ='$idtoko' GROUP BY kdtransaksi ORDER BY kdtransaksi ASC");
-	  	} 
+	  	}
 
 		$SumTotalItem1=mysqli_num_rows($qryTotalItem1);
 		if (!empty($date1&&$date2)) {
@@ -296,7 +288,7 @@ else {
  		elseif (!empty($date3&&$date4)) {
  			$result=mysqli_query($conn,"SELECT * FROM transaksi,item WHERE transaksi.kditem=item.kditem AND transaksi.id_toko=item.id_toko AND transaksi.id_toko='$idtoko' AND transaksi.tgltransaksi BETWEEN '$date3' AND '$date4' GROUP BY transaksi.kditem ORDER BY item.id_item ASC"); } else {
  			$result=mysqli_query($conn,"SELECT * FROM transaksi,item WHERE transaksi.kditem=item.kditem AND transaksi.id_toko=item.id_toko AND transaksi.id_toko='$idtoko'  GROUP BY transaksi.kditem ORDER BY item.id_item ASC");
- 		} 
+ 		}
 		while($row = mysqli_fetch_array($result,MYSQLI_ASSOC))
 		{
 		?>
@@ -317,7 +309,7 @@ else {
 	$queryItemC1=mysqli_query($conn,"INSERT INTO itemc1 (id_toko,kditem,support_count,persen_support)VALUES('$idtoko','$kditem','$countItem1','$PersentItem1')");
 	 ?></td>
 		</tr>
- 
+
 		<?php } ?>
 </table></center><br>
 <table border="1" align="left" cellpadding="0" cellspacing="2" style="border:thin; border-color:#399; padding-left:3px; margin-top:5px;">
@@ -353,7 +345,7 @@ else {
 			<td style="text-align: center;"><?php echo $rowMinC1['support_count'];?></td>
 			<td style="text-align: center;"><?php echo $rowMinC1['persen_support'];?>%</td>
 		</tr>
- 
+
 		<?php } } else {
 			echo"<center><H3>PERLU DATA TRANSAKSI UNTUK MEMPROSES</H3></center>";
 		}
