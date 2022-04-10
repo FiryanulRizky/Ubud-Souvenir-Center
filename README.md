@@ -6,8 +6,6 @@ Skripsi Penelitian (Implementasi Algoritma Apriori)
  - Tanggal Penelitian : 27 Mei 2020 - 30 Agustus 2021.
  - Dibawah bimbingan : Bapak Ida Bagus Made Mahendra, S.Kom., M.Kom. dan Bapak I Gusti Agung Gede Arya Kadyanan, S.Kom., M.Kom.
 
-Projek ini telah mendapatkan support dan didanai pemerintah kecamatan Ubud sebagai startup lokal yang telah disebarluaskan ke masyarakat untuk memberdayakan UMKM pengrajin dan penjual souvenir lokal bali dilingkungan Kecamatan Ubud.
-
 # Catatan
 - Projek ini adalah projek tugas akhir dan demi melindungi keamanan data dan privasi intelektual, file pemrograman inti yang mengandung proses algoritma tidak disertakan dalam direktori ini,
 - File pemrograman Backend php, javascript, html, css yang diupload pada web server telah dikumpulkan pada satu folder public_html
@@ -30,7 +28,7 @@ Aplikasi dibuat dengan model hybrid (Android SDK 19 (KitKat)- SDK 31 (Android 12
    - javascript, html, css
    - WebView
 2. Backend (Native Website)
-   - PHP 7
+   - PHP 8.1.4
    - DBMS Mysql
 
 # Fitur Sistem Aplikasi
