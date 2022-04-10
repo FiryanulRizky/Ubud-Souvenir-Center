@@ -7,7 +7,7 @@
 <?php
 // *** LOAD PAGE HEADER
 include "./header_session/header_index.php";
-include"./header_session/sidebar_index.php";
+include "./header_session/sidebar_index.php";
 
 ob_start();
 include"./android/8_panel_penjualan/cart.php";
@@ -26,7 +26,6 @@ if (!empty($_SESSION['page'])) $_GET['page']=$_SESSION['page'];
 if (!empty($_POST['category'])) $_SESSION['scategory']=$_POST['category'];
 if (!empty($_GET['category'])) $_SESSION['scategory']=$_GET['category'];
 if (!empty($_POST['cari'])) $_SESSION['scari']=$_POST['cari'];
-
 
 // *** DEFAULT VARIABLE SETTING
 $line_cost=0; // *** CART - SUBTOTAL COST
@@ -72,59 +71,57 @@ if ($ada>0){ // ** IF RECORD EXISTS
     } // *** end if ($total_rec>$rowperpage)
 
 ?>
-   
+
 <div id="bgproduct">
 <?php
 $kategori = $_GET['category'];
 if (!empty($_GET['category'])) {
     ?>
-    <div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>Filter Category <?php echo $kategori; ?></H3> <br><a href="../../index.php?clear=y">>>Delete Category<<</a> <i class="fa fa-tasks"></i></center></div>
+    <div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>Filter Category <?php echo $kategori; ?></H3> <br><a href="index.php?clear=y">>>Delete Category<<</a> <i class="fa fa-tasks"></i></center></div>
     <?php
-} elseif($_SESSION['scari']) { 
+} elseif($_SESSION['scari']) {
     ?>
-    <div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>Filter by Search : "<?php echo $_SESSION['scari']; ?>"</H3> <br><a href="../../index.php?clear=y">>>Delete Filter By Search<<</a> <i class="fa fa-tasks"></i></center></div>
+    <div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>Filter by Search : "<?php echo $_SESSION['scari']; ?>"</H3> <br><a href="index.php?clear=y">>>Delete Filter By Search<<</a> <i class="fa fa-tasks"></i></center></div>
     <?php
 } else {
-?> 
+?>
 <div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>All Product List</H3> <br><a href="./android/7_panel_guest/index.php?clear=y">>>All Shop List<<</a> <i class="fa fa-tasks"></i></center></div>
 <?php }
     while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC))
         {
     echo "<a href=\"./android/7_panel_guest/detail.php?idtoko=".$row['id_toko']."&id=".$row['kditem']."&merk=".$row['merk']."\" class=\"tbeli\">";
-        echo'<div class="barang">';		  
+        echo'<div class="barang">';
         echo'<table>';
-		
-		 echo'<tr><td class="nama_barang" align="center">';
-         echo"".$row['merk']."";
-         echo'</td></tr>';
+
+		echo'<tr><td class="nama_barang" align="center">';
+        echo"".$row['merk']."";
+        echo'</td></tr>';
 
         echo'<tr><td>';
         echo"".$gambar."<img src=\"./gambar/produk/".$row['gambar_item']."\" width=190 height=204  align=center border=0 >";
         echo'</td></tr>';
-            
-          echo'<tr><td class="harga_barang">';
-          echo"Price: ".format_currency($row['harga'])."";
-          echo'</td></tr>';
-          
-          echo'<tr><td>';
-          echo "<a href=\"./android/7_panel_guest/detail.php?idtoko=".$row['id_toko']."&id=".$row['kditem']."&merk=".$row['merk']."\" class=\"tbeli\"><span>
-          <input type='button' class='btn_cart' value='CHECK DETAIL'></span></a>";
-          echo'</td></tr>';
-          
-          echo'</table>';
+
+        echo'<tr><td class="harga_barang">';
+        echo"Price: ".format_currency($row['harga'])."";
+        echo'</td></tr>';
+
+        echo'<tr><td>';
+        echo "<a href=\"./android/7_panel_guest/detail.php?idtoko=".$row['id_toko']."&id=".$row['kditem']."&merk=".$row['merk']."\" class=\"tbeli\"><span>
+        <input type='button' class='btn_cart' value='CHECK DETAIL'></span></a>";
+        echo'</td></tr>';
+
+        echo'</table>';
         echo'</div>';echo"</a>";
 }
-
 
 echo"<div id='bgpaging'>".$paging_html."</div>";
 echo '</div>';
 } else {
 echo'<div id="bgproduct">';
 $kategori = $_GET['category'];
-    ?><div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>Filter Category <?php echo $kategori; ?></H3> <br><a href="../../index.php?clear=y">>>Delete Category<<</a> <i class="fa fa-tasks"></i></center></div>
+    ?><div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>Filter Category <?php echo $kategori; ?></H3> <br><a href="index.php?clear=y">>>Delete Category<<</a> <i class="fa fa-tasks"></i></center></div>
     <?php
     echo "<img src='./gambar/images/tidak_ditemukan.png'>";
-
 }
 // *** LOAD PAGE FOOTER
 
