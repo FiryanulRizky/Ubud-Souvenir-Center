@@ -11,9 +11,7 @@ foreach ($_POST AS $K=>$V) echo "<li>$K=>$V";
 $product_id = $_GET['id'];	 //the product id from the URL
 $action 	= $_GET['action']; //the action from the URL
 
-
 switch($action) {
-
     case "add":
         // TAMBAH 1 UNTUK NILAI PRODUCT ID -> $product_id
 
@@ -25,7 +23,7 @@ if ( $row['stok']==0){
         window.location=('index.php?idtoko=".$_GET['idtoko']."')</script>";
     }
   else{
-      
+
       if($row['stok']>$_GET['stok']) {
         $_SESSION['cart'][$product_id]++;
         echo "<script>window.location=('index.php?idtoko=".$_GET['idtoko']."&id=".$product_id."')</script>";
@@ -49,8 +47,6 @@ if ( $row['stok']==0){
         header("location:checkout_fisrt.php?idtoko=".$_GET['idtoko']."");
 exit;
     break;
-    
-
     case "update":
 
     $sql = mysqli_query($conn,"SELECT stok FROM item WHERE kditem=".$product_id." AND id_toko=".$_GET['idtoko']."");
@@ -66,31 +62,19 @@ exit;
 
     else{
       $_SESSION['cart'][$product_id] = $_GET['jumbel'];
-      
       //mysqli_query("UPDATE php_shop_products SET produk.stok=produk.stok-orders_detail.jumlah WHERE orders_detail.id_orders='$_POST[id]'");
-      
-
-
    }
 }
   //  }
 		break;
-
-    
 }
-
-
-
-
 
 if($_SESSION['cart']) {	// *** JIKA KERANJANG ADA ISI NYA / TIDAK KOSONG
 
 
     // TAMPILKAN TABEL KERANJANG
     echo "<table border=\"0\"  cellspacing=0 cellpadding=0 id=\"tbcart\">";	// format tampilan menggunakan HTML table
-
     echo '<tr><td colspan=4></td></tr>';
-
 
         // LOOPING / PENGULANGAN : UNTUK MENDEFINISIKAN ISI KERANJANG
         // $product_id sebagai key DAN $quantity sebagai value
@@ -112,9 +96,7 @@ if($_SESSION['cart']) {	// *** JIKA KERANJANG ADA ISI NYA / TIDAK KOSONG
                 // MENGHITUNG TOTAL DENGAN MENAMBAHKAN SUBTOTAL ($line_cost) MASING2 PRODUCT
                 $total_cost += $line_cost;
                 $total_quantity += $quantity;
-
             }
-
         }
 
         //TAMPILKAN TOTAL
@@ -125,28 +107,15 @@ if($_SESSION['cart']) {	// *** JIKA KERANJANG ADA ISI NYA / TIDAK KOSONG
         echo "</tr>";
         // LINK empty cart - YANG MANA LINK KE HALAMAN INI JUGA, TAPI DENGAN action = empty.
         // SERTA javascript KETIKA onlick event MENANYAKAN user UNTUK KONFIRMASI
-        echo "<tr>";
-            
-           echo "</tr>";
-
-             echo "<tr>";
-            
-        echo "</tr>";
-    echo "</table>";
-
-
-
+        echo "<tr></tr><tr></tr></table>";
 }
 else
 {  // JIKA KERANJANG KOSONG -> TAMPILKAN PESAN INI
-
     echo "<table border=\"0\" cellspacing=0 cellpadding=0 id=\"tbcart\">";	// format tampilan menggunakan HTML table
     //TAMPILKAN TOTAL
 
      echo "<tr>";
-            echo "<td><i class='fa fa-shopping-cart' style='font-size: 30px; color:#fff;'></i> ".number_format($total_quantity,0,"",".")."(Items)</td>";
-            echo "</tr>";
-            echo"";
+            echo "<td><i class='fa fa-shopping-cart' style='font-size: 30px; color:#fff;'></i> 0 (Items)</td></tr> ";
     echo "</table>\n";
 }
 ?>
