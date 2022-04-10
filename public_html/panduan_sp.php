@@ -21,5 +21,5 @@ echo'<table border=1 style="width:100%;text-align:center;border:1px solid;" >
     </tr>
     <tr><td colspan="2">Email : firyan2903@gmail.com<br>HP/WA : 0895606181117</td></tr>
 </table><br>
-<center><b style="color:blue;"><a href="http://shorturl.at/stvxH"><input type="button" name="panduan_btn" value="Cek Panduan Aplikasi"></a></b></center>';
+<center><b style="color:blue;"><a href="http://shorturl.at/bxM56"><input type="button" name="panduan_btn" value="Cek Panduan Aplikasi"></a></b></center>';
 ?></body></html>
