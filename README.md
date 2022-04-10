@@ -79,7 +79,7 @@ Aplikasi dibuat dengan model hybrid (Android SDK 19 (KitKat)- SDK 31 (Android 12
 
 ![15](https://user-images.githubusercontent.com/60762912/139584627-27395ce3-b87f-416c-85db-5eff953823c2.jpg)
 
-![Capture](https://user-images.githubusercontent.com/60762912/162620022-fe145729-c5a6-4d72-884c-18ca566b045f.PNG)
+![16](https://user-images.githubusercontent.com/60762912/162623039-2315c6bc-bfd9-4cf6-b139-759d923adaad.jpg)
 
 ![17](https://user-images.githubusercontent.com/60762912/139584639-930a27d2-8d61-4ffc-a337-c07e9839ceef.jpg)
 
