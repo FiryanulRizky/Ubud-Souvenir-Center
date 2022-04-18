@@ -5,6 +5,7 @@ Skripsi Penelitian (Implementasi Algoritma Apriori)
  - Muhammad Firyanul Rizky (Periode 2017 - 2021) - Fakultas Mipa - Prodi Informatika - Universitas Udayana
  - Tanggal Penelitian : 27 Mei 2020 - 30 Agustus 2021.
  - Dibawah bimbingan : Bapak Ida Bagus Made Mahendra, S.Kom., M.Kom. dan Bapak I Gusti Agung Gede Arya Kadyanan, S.Kom., M.Kom.
+ - Cek Publikasi Jurnal : https://ojs.unud.ac.id/index.php/JLK/article/view/78212.
 
 # Catatan
 - Projek ini adalah projek tugas akhir dan demi melindungi keamanan data dan privasi intelektual, file pemrograman inti yang mengandung proses algoritma tidak disertakan dalam direktori ini,
@@ -45,7 +46,14 @@ Aplikasi dibuat dengan model hybrid (Android SDK 19 (KitKat)- SDK 31 (Android 12
 10. Website Super Admin sebagai Sistem Monitoring & Evaluasi
 11. Auto Clear Cache setelah aplikasi ditutup (Mencegah Pembengkakan Ukuran File dan Menghemat Memori Perangkat)
 
-# ER Diagram
+# Usecase, ER, Activity, Sequence, & DFD Diagram
+<b>Usecase e-Marketplace</b><hr>
+![2 Usecase User](https://user-images.githubusercontent.com/60762912/163785951-45aa0124-b3d4-4180-976c-b67f2d022298.png)
+<b>Usecase Administrator</b><hr>
+![1 Usecase Administrator](https://user-images.githubusercontent.com/60762912/163785460-1c1f7730-d6b9-4a17-9282-3a670e85619e.png)
+<b>Usecase Super Administrator</b><hr>
+![3 Usecase Super Admin](https://user-images.githubusercontent.com/60762912/163786099-6f3d1aa7-8eb7-4b51-9362-ff4b2d36dc75.png)
+<b>ER Diagram</b><hr>
 ![ERD](https://user-images.githubusercontent.com/60762912/127185557-8a85cce4-8545-4b25-9387-ea2fc49a60c4.png)
 
 # Antarmuka Aplikasi
