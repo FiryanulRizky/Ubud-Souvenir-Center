@@ -13,7 +13,7 @@ Skripsi Penelitian (Implementasi Algoritma Apriori)
 - File database terdapat pada folder database_sql
 - File koneksi database, terdapat di /db/koneksi.php, dan /generator_qrcode/config.php.
 - Projek telah di hosting dengan domain https://ubud-souvenir-center.my.id.
-- Projek ini dilindungi dari plagiasi, cek sertifikat HAKI : [klik di sini](https://drive.google.com/file/d/1ERYHx33wr1V4FtSgpIfZ8BLBnExA-kwx/view?usp=sharing), dan catatan e-hakcipta Kemenkumham : [klik di sini](https://e-hakcipta.dgip.go.id/index.php/c?code=OTJlNDJhM2I3OTNkMTRmOGZlZjNjZDUwZDRmYzA1ZWEK).
+- Projek ini dilindungi dari plagiasi, cek sertifikat HAKI : [klik di sini](https://drive.google.com/file/d/1ERYHx33wr1V4FtSgpIfZ8BLBnExA-kwx/view?usp=sharing), dan catatan e-hakcipta Kemenkumham : [di sini](https://e-hakcipta.dgip.go.id/index.php/c?code=OTJlNDJhM2I3OTNkMTRmOGZlZjNjZDUwZDRmYzA1ZWEK).
 - Selengkapnya Cek Panduan Penggunaan Aplikasi : [klik di sini](https://drive.google.com/file/d/1o4qJOWi__phxgi4Bk8qq3NK3kEE-di_6/view?usp=sharing).
 - Disediakan aktivitas Demo/Tester untuk mencoba segala fitur yang ada pada aplikasi, 
 Silahkan baca panduan aplikasi [di link ini](https://drive.google.com/file/d/1o4qJOWi__phxgi4Bk8qq3NK3kEE-di_6/view?usp=sharing), unduh aplikasi, dan jalankan aplikasi sebagai administrator.
