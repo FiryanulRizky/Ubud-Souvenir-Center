@@ -1,14 +1,15 @@
 # Ubud Souvenir Center Project v1.0
-Projek Website dan Aplikasi Mobile (Sistem Analisis Bisnis berbasis E-Marketplace Penjualan Souvenir Pasar Seni Ubud Gianyar, Bali). 
 
-Skripsi Penelitian (Implementasi Algoritma Apriori)
- - Muhammad Firyanul Rizky (Periode 2017 - 2021) - Fakultas [Mipa](https://fmipa.unud.ac.id/) - Prodi [Informatika](https://if.unud.ac.id/) - Universitas [Udayana](https://www.unud.ac.id/)
+<b>Skripsi Penelitian (Implementasi Algoritma Apriori)</b>
+ - Judul Penelitian : Pengembangan Sistem Rekomendasi Penempatan Produk Sovenir Lokal Bali Berdasarkan Algoritma Apriori Studi Kasus : Pasar Seni Ubud Gianyar, Bali
+ - oleh : Muhammad Firyanul Rizky (Periode 2017 s.d. 2021): Fakultas [Mipa](https://fmipa.unud.ac.id/), Prodi [Informatika](https://if.unud.ac.id/), Universitas [Udayana](https://www.unud.ac.id/)
  - Tanggal Penelitian : 27 Mei 2020 - 30 Agustus 2021.
  - Dibawah bimbingan : Bapak [Ida Bagus Made Mahendra, S.Kom., M.Kom](https://scholar.google.co.id/citations?user=uq3NggMAAAAJ). dan Bapak [I Gusti Agung Gede Arya Kadyanan, S.Kom., M.Kom](https://scholar.google.co.id/citations?user=gq2RjhIAAAAJ).
  - Cek Publikasi Jurnal yang berkaitan dengan penelitian ini : [klik di sini](https://ojs.unud.ac.id/index.php/JLK/article/view/78212).
+ - Cek Detail Pengujian Sistem : [Blackbox](https://drive.google.com/file/d/1-ZG84h1hQwg0oHh7INnBJ7CzSK_gF38K/view?usp=sharing), [Aturan Asosiasi Apriori](https://drive.google.com/file/d/1z83FAHZL1sXgn4h7jDq4l-WDAj3zuUMD/view?usp=sharing) (Terimakasih & Apresiasi setinggi-tingginya kepada adik-adik mahasiswa yang telah bersedia membantu pengujian sistem pada penelitian ini).
 
 # Catatan
-- Projek ini adalah projek tugas akhir dan demi melindungi keamanan data dan privasi intelektual, file pemrograman inti yang mengandung proses algoritma tidak disertakan dalam direktori ini,
+- Projek ini adalah projek tugas akhir (skripsi) dan demi melindungi keamanan data dan privasi intelektual, file pemrograman inti yang mengandung proses algoritma tidak disertakan dalam direktori ini,
 - File pemrograman Backend php, javascript, html, css yang diupload pada web server telah dikumpulkan pada satu folder public_html
 - File database terdapat pada folder database_sql
 - File koneksi database, terdapat di /db/koneksi.php, dan /generator_qrcode/config.php.
