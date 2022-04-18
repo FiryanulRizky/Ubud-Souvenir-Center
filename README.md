@@ -5,7 +5,7 @@ Skripsi Penelitian (Implementasi Algoritma Apriori)
  - Muhammad Firyanul Rizky (Periode 2017 - 2021) - Fakultas Mipa - Prodi Informatika - Universitas Udayana
  - Tanggal Penelitian : 27 Mei 2020 - 30 Agustus 2021.
  - Dibawah bimbingan : Bapak Ida Bagus Made Mahendra, S.Kom., M.Kom. dan Bapak I Gusti Agung Gede Arya Kadyanan, S.Kom., M.Kom.
- - Cek Publikasi Jurnal : https://ojs.unud.ac.id/index.php/JLK/article/view/78212.
+ - Berikut adalah [Publikasi Jurnal](https://ojs.unud.ac.id/index.php/JLK/article/view/78212) yang berkaitan dengan penelitian ini.
 
 # Catatan
 - Projek ini adalah projek tugas akhir dan demi melindungi keamanan data dan privasi intelektual, file pemrograman inti yang mengandung proses algoritma tidak disertakan dalam direktori ini,
@@ -43,19 +43,26 @@ Aplikasi dibuat dengan model hybrid (Android SDK 19 (KitKat)- SDK 31 (Android 12
 7. Bar Diagram Produk Terlaris
 8. Pie Diagram Persentase Penjualan
 9. Linechart Pendapatan Bulanan
-10. Website Super Admin sebagai Sistem Monitoring & Evaluasi
-11. Auto Clear Cache setelah aplikasi ditutup (Mencegah Pembengkakan Ukuran File dan Menghemat Memori Perangkat)
+10. Clear Cache otomatis setelah aplikasi ditutup (Mencegah Pembengkakan Ukuran File dan Menghemat Memori Perangkat)
+11. Website Super Admin sebagai Sistem Monitoring & Evaluasi
 
 # Modelling System
-<b>Model Diagram</b>
+Berikut adalah dokumentasi untuk modelling sistem :
+1. Mockup : [e-marketplace](https://drive.google.com/drive/folders/1WBFzE2YAQ8WsPF7UayUy6bRGFkJZaN3Y?usp=sharing), [administrator](https://drive.google.com/drive/folders/1EdIAMbJu9IhiWog2whf7ibiy-lLk6tmr?usp=sharing), [Super Admin](https://drive.google.com/drive/folders/1YFDoH4rlG5Kceqkr4-fVj99VHSPhXDBo?usp=sharing) (klik link tulisan berwarna biru untuk detail lanjutan).
+2. Activity Diagram : [klik disini](https://drive.google.com/drive/folders/10QUiOtDSjGgP1F_X1E5Ot-p14wKO632n?usp=sharing).
+3. Sequence Diagram : [klik disini](https://drive.google.com/drive/folders/1BNBsLCgRZDk0ysDtOmoKAP6fRl8sh2Ng?usp=sharing).
+4. DFD Diagram : [klik disini](https://drive.google.com/drive/folders/1qTNHHHGpUhYg2FZj5NIIjUEgSsZCTNwI?usp=sharing).
+5. Database Relasional/Physical Diagram : [klik disini](https://drive.google.com/drive/folders/1-atszlZ2d_SM2c5dfiF_Fsmr4AuqbpST?usp=sharing).
+
+<b>6. Diagram Infrastruktur Sistem</b>
 
 ![arsitektur sistem 2](https://user-images.githubusercontent.com/60762912/163806514-f90539f4-94d6-41f2-88ad-f15b53bd4e31.jpg)
 
-<b>Usecase Diagram</b>
+<b>7. Usecase Diagram</b>
 
 ![1 Usecase Administrator](https://user-images.githubusercontent.com/60762912/163801981-a19006d1-59bf-47d4-b13b-e8d3b338a2cf.jpg)
 
-<b>Class Diagram</b>
+<b>8. Class Diagram</b>
 
 ![6 UML Class Diagram](https://user-images.githubusercontent.com/60762912/163806665-fcc6d167-c9df-44d7-89f0-dad9f0cde4fb.png)
 <hr>
