@@ -47,14 +47,15 @@ Aplikasi dibuat dengan model hybrid (Android SDK 19 (KitKat)- SDK 31 (Android 12
 11. Auto Clear Cache setelah aplikasi ditutup (Mencegah Pembengkakan Ukuran File dan Menghemat Memori Perangkat)
 
 # Usecase, ER, Activity, Sequence, & DFD Diagram
-<b>Usecase e-Marketplace</b><hr>
+<h2>Usecase e-Marketplace</h2>
 ![2 Usecase User](https://user-images.githubusercontent.com/60762912/163785951-45aa0124-b3d4-4180-976c-b67f2d022298.png)
-<b>Usecase Administrator</b><hr>
+<hr><h2>Usecase Administrator</h2>
 ![1 Usecase Administrator](https://user-images.githubusercontent.com/60762912/163785460-1c1f7730-d6b9-4a17-9282-3a670e85619e.png)
-<b>Usecase Super Administrator</b><hr>
+<hr><h2>Usecase Super Administrator</h2>
 ![3 Usecase Super Admin](https://user-images.githubusercontent.com/60762912/163786099-6f3d1aa7-8eb7-4b51-9362-ff4b2d36dc75.png)
-<b>ER Diagram</b><hr>
+<hr><h2>ER Diagram</h2>
 ![ERD](https://user-images.githubusercontent.com/60762912/127185557-8a85cce4-8545-4b25-9387-ea2fc49a60c4.png)
+<hr><a href="#">Activity Diagram</a>
 
 # Antarmuka Aplikasi
 ![1](https://user-images.githubusercontent.com/60762912/139584342-631b0e3d-d506-41e6-87a6-71a8e4e01fa0.jpg)
