@@ -2,10 +2,10 @@
 Projek Website dan Aplikasi Mobile (Sistem Analisis Bisnis berbasis E-Marketplace Penjualan Souvenir Pasar Seni Ubud Gianyar, Bali). 
 
 Skripsi Penelitian (Implementasi Algoritma Apriori)
- - Muhammad Firyanul Rizky (Periode 2017 - 2021) - Fakultas Mipa - Prodi Informatika - Universitas Udayana
+ - Muhammad Firyanul Rizky (Periode 2017 - 2021) - Fakultas [Mipa](https://fmipa.unud.ac.id/) - Prodi [Informatika](https://if.unud.ac.id/) - Universitas [Udayana](https://www.unud.ac.id/)
  - Tanggal Penelitian : 27 Mei 2020 - 30 Agustus 2021.
- - Dibawah bimbingan : Bapak Ida Bagus Made Mahendra, S.Kom., M.Kom. dan Bapak I Gusti Agung Gede Arya Kadyanan, S.Kom., M.Kom.
- - Berikut adalah [Publikasi Jurnal](https://ojs.unud.ac.id/index.php/JLK/article/view/78212) yang berkaitan dengan penelitian ini.
+ - Dibawah bimbingan : Bapak [Ida Bagus Made Mahendra, S.Kom., M.Kom](https://scholar.google.co.id/citations?user=uq3NggMAAAAJ). dan Bapak [I Gusti Agung Gede Arya Kadyanan, S.Kom., M.Kom](https://scholar.google.co.id/citations?user=gq2RjhIAAAAJ).
+ - Cek Publikasi Jurnal yang berkaitan dengan penelitian ini : [klik di sini](https://ojs.unud.ac.id/index.php/JLK/article/view/78212).
 
 # Catatan
 - Projek ini adalah projek tugas akhir dan demi melindungi keamanan data dan privasi intelektual, file pemrograman inti yang mengandung proses algoritma tidak disertakan dalam direktori ini,
@@ -13,10 +13,10 @@ Skripsi Penelitian (Implementasi Algoritma Apriori)
 - File database terdapat pada folder database_sql
 - File koneksi database, terdapat di /db/koneksi.php, dan /generator_qrcode/config.php.
 - Projek telah di hosting dengan domain https://ubud-souvenir-center.my.id.
-- Projek ini dilindungi dari segala bentuk plagiasi, cek sertifikat HAKI disini http://shorturl.at/uIL36.
-- Selengkapnya Cek Panduan Penggunaan Aplikasi disini : http://shorturl.at/bxM56.
+- Projek ini dilindungi dari plagiasi, cek sertifikat HAKI : [klik di sini](https://drive.google.com/file/d/1ERYHx33wr1V4FtSgpIfZ8BLBnExA-kwx/view?usp=sharing), dan catatan e-hakcipta Kemenkumham : [klik di sini](https://e-hakcipta.dgip.go.id/index.php/c?code=OTJlNDJhM2I3OTNkMTRmOGZlZjNjZDUwZDRmYzA1ZWEK).
+- Selengkapnya Cek Panduan Penggunaan Aplikasi : [klik di sini](https://drive.google.com/file/d/1o4qJOWi__phxgi4Bk8qq3NK3kEE-di_6/view?usp=sharing).
 - Disediakan aktivitas Demo/Tester untuk mencoba segala fitur yang ada pada aplikasi, 
-Silahkan baca panduan aplikasi pada link diatas, unduh aplikasi, dan jalankan aplikasi sebagai administrator.
+Silahkan baca panduan aplikasi [di link ini](https://drive.google.com/file/d/1o4qJOWi__phxgi4Bk8qq3NK3kEE-di_6/view?usp=sharing), unduh aplikasi, dan jalankan aplikasi sebagai administrator.
   - Pilih Toko : Tester Projek (KDTK32)
   - Username : tester
   - Password : 123
@@ -48,11 +48,11 @@ Aplikasi dibuat dengan model hybrid (Android SDK 19 (KitKat)- SDK 31 (Android 12
 
 # Modelling System
 Berikut adalah dokumentasi untuk modelling sistem :
-1. Mockup : [e-marketplace](https://drive.google.com/drive/folders/1WBFzE2YAQ8WsPF7UayUy6bRGFkJZaN3Y?usp=sharing), [administrator](https://drive.google.com/drive/folders/1EdIAMbJu9IhiWog2whf7ibiy-lLk6tmr?usp=sharing), [Super Admin](https://drive.google.com/drive/folders/1YFDoH4rlG5Kceqkr4-fVj99VHSPhXDBo?usp=sharing) (klik link tulisan berwarna biru untuk detail lanjutan).
-2. Activity Diagram : [klik disini](https://drive.google.com/drive/folders/10QUiOtDSjGgP1F_X1E5Ot-p14wKO632n?usp=sharing).
-3. Sequence Diagram : [klik disini](https://drive.google.com/drive/folders/1BNBsLCgRZDk0ysDtOmoKAP6fRl8sh2Ng?usp=sharing).
-4. DFD Diagram : [klik disini](https://drive.google.com/drive/folders/1qTNHHHGpUhYg2FZj5NIIjUEgSsZCTNwI?usp=sharing).
-5. Database Relasional/Physical Diagram : [klik disini](https://drive.google.com/drive/folders/1-atszlZ2d_SM2c5dfiF_Fsmr4AuqbpST?usp=sharing).
+1. Mockup : [e-marketplace](https://drive.google.com/drive/folders/1WBFzE2YAQ8WsPF7UayUy6bRGFkJZaN3Y?usp=sharing), [administrator](https://drive.google.com/drive/folders/1EdIAMbJu9IhiWog2whf7ibiy-lLk6tmr?usp=sharing), [Super Admin](https://drive.google.com/drive/folders/1YFDoH4rlG5Kceqkr4-fVj99VHSPhXDBo?usp=sharing) (klik link tulisan berwarna biru untuk detail).
+2. Activity Diagram : [klik di sini](https://drive.google.com/drive/folders/10QUiOtDSjGgP1F_X1E5Ot-p14wKO632n?usp=sharing).
+3. Sequence Diagram : [klik di sini](https://drive.google.com/drive/folders/1BNBsLCgRZDk0ysDtOmoKAP6fRl8sh2Ng?usp=sharing).
+4. DFD Diagram : [klik di sini](https://drive.google.com/drive/folders/1qTNHHHGpUhYg2FZj5NIIjUEgSsZCTNwI?usp=sharing).
+5. Database Relasional/Physical Diagram : [klik di sini](https://drive.google.com/drive/folders/1-atszlZ2d_SM2c5dfiF_Fsmr4AuqbpST?usp=sharing).
 
 <b>6. Diagram Infrastruktur Sistem</b>
 
@@ -104,7 +104,7 @@ Berikut adalah dokumentasi untuk modelling sistem :
 
 ![18](https://user-images.githubusercontent.com/60762912/139584650-32592c92-19f9-411d-8a69-ccb9157de0e0.jpg)
 
-![19](https://user-images.githubusercontent.com/60762912/139584653-ef2dee92-a3e9-4b5e-9c20-c763b76eb388.jpg)
+![19](https://user-images.githubusercontent.com/60762912/163813189-bcb79646-2380-4527-a36c-69cfe138b1a7.jpg)
 
 ![20](https://user-images.githubusercontent.com/60762912/139584666-a61d1ef4-dfe5-4385-bc30-6b53119b9519.jpg)
 
