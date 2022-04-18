@@ -48,11 +48,16 @@ Aplikasi dibuat dengan model hybrid (Android SDK 19 (KitKat)- SDK 31 (Android 12
 
 # Modelling System
 <b>Model Diagram</b>
-![3 Backend Infrastruktur](https://user-images.githubusercontent.com/60762912/163801937-494b1e1f-1e08-4f7a-8a40-433aa597f456.jpg)
-<hr>
+
+![arsitektur sistem 2](https://user-images.githubusercontent.com/60762912/163806514-f90539f4-94d6-41f2-88ad-f15b53bd4e31.jpg)
 
 <b>Usecase Diagram</b>
+
 ![1 Usecase Administrator](https://user-images.githubusercontent.com/60762912/163801981-a19006d1-59bf-47d4-b13b-e8d3b338a2cf.jpg)
+
+<b>Class Diagram</b>
+
+![6 UML Class Diagram](https://user-images.githubusercontent.com/60762912/163806665-fcc6d167-c9df-44d7-89f0-dad9f0cde4fb.png)
 <hr>
 
 # Antarmuka Aplikasi
