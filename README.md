@@ -46,16 +46,14 @@ Aplikasi dibuat dengan model hybrid (Android SDK 19 (KitKat)- SDK 31 (Android 12
 10. Website Super Admin sebagai Sistem Monitoring & Evaluasi
 11. Auto Clear Cache setelah aplikasi ditutup (Mencegah Pembengkakan Ukuran File dan Menghemat Memori Perangkat)
 
-# Usecase, ER, Activity, Sequence, & DFD Diagram
-<h2>Usecase e-Marketplace</h2>
-![2 Usecase User](https://user-images.githubusercontent.com/60762912/163785951-45aa0124-b3d4-4180-976c-b67f2d022298.png)
-<hr><h2>Usecase Administrator</h2>
-![1 Usecase Administrator](https://user-images.githubusercontent.com/60762912/163785460-1c1f7730-d6b9-4a17-9282-3a670e85619e.png)
-<hr><h2>Usecase Super Administrator</h2>
-![3 Usecase Super Admin](https://user-images.githubusercontent.com/60762912/163786099-6f3d1aa7-8eb7-4b51-9362-ff4b2d36dc75.png)
-<hr><h2>ER Diagram</h2>
-![ERD](https://user-images.githubusercontent.com/60762912/127185557-8a85cce4-8545-4b25-9387-ea2fc49a60c4.png)
-<hr><a href="#">Activity Diagram</a>
+# Modelling System
+<b>Model Diagram</b>
+![3 Backend Infrastruktur](https://user-images.githubusercontent.com/60762912/163801937-494b1e1f-1e08-4f7a-8a40-433aa597f456.jpg)
+<hr>
+
+<b>Usecase Diagram</b>
+![1 Usecase Administrator](https://user-images.githubusercontent.com/60762912/163801981-a19006d1-59bf-47d4-b13b-e8d3b338a2cf.jpg)
+<hr>
 
 # Antarmuka Aplikasi
 ![1](https://user-images.githubusercontent.com/60762912/139584342-631b0e3d-d506-41e6-87a6-71a8e4e01fa0.jpg)
