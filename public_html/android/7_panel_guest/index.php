@@ -39,7 +39,6 @@ $qry_2 = "SELECT kategori.nama_kategori,infotoko.id_toko FROM kategori,infotoko 
 $qry_t3.="WHERE kategori.id_toko=infotoko.id_toko AND  kategori.nama_kategori='".$_GET['kategori']."'";
 $qry_t4.="WHERE item .id_toko=infotoko.id_toko AND  item.merk='".$_GET['merk']."'";
 
-
 $rowperpage=4; // *** TAMPIL NUM RECORD PER PAGE
 
 // ** predefine record number
@@ -67,13 +66,13 @@ if ($total_rec>0){ // ** JIKA ADA DATA RECORD
     // *** PREV RECORD LINK
     if ($_GET['halaman_toko']>1) $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?halaman_toko='.($_GET['halaman_toko']-1).'">&laquo;prev</a>';
     // *** PAGING NUMBERS LINK
-    for ($i=1; $i< ceil($total_rec/$rowperpage); $i++){
+    for ($i=1; $i<= ceil($total_rec/$rowperpage); $i++){
         $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?halaman_toko='.$i.'"';
         if ($_GET['halaman_toko']==$i) $paging_html.= ' class="paging_cur" ';
         $paging_html.= '>'.$i.'</a>';
     }
     // *** NEXT RECORD LINK
-    if ($_GET['halaman_toko']< ceil($total_rec/$rowperpage)-1) $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?halaman_toko='.($_GET['halaman_toko']+1).'">next&raquo;</a> ';
+    if ($_GET['halaman_toko']< ceil($total_rec/$rowperpage)) $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?halaman_toko='.($_GET['halaman_toko']+1).'">next&raquo;</a> ';
     $paging_html.= '</div><!-- id="paging" -->';
     } // *** end if ($total_rec>$rowperpage)
 
@@ -182,7 +181,6 @@ if (!empty($_GET['kategori'])) {
 		  echo"</a>";
         echo'</div>';
 }
-
 
 echo"<div id='bgpaging'>".$paging_html."</div>";
 echo '</div>';
