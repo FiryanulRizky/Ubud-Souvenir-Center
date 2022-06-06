@@ -78,9 +78,9 @@ $jml_item=mysqli_query($conn,"SELECT * FROM item WHERE id_toko='".$_GET['idtoko'
 echo '<div id="bgproduct">';
 $kategori=$_GET['category'];
 if (!empty($kategori)){
-    echo'<div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>Filter Category '.$kategori.'</H3> <br><a href="index.php?idtoko='.$_GET['idtoko'].'&clear=y">>>Delete Category<<</a> <i class="fa fa-tasks"></i></center></div>';
+    echo'<div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>Filter Category '.$kategori.'</H3> <br><a href="index.php?idtoko='.$_GET['idtoko'].'&halaman_produk=1&clear=y">>>Delete Category<<</a> <i class="fa fa-tasks"></i></center></div>';
 } elseif($_SESSION['scari']) { 
-    echo '<div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>Filter by Search : '.$_SESSION['scari'].' </H3> <br><a href="index.php?idtoko='.$_GET['idtoko'].'&clear=y">>>Delete Filter By Search<<</a> <i class="fa fa-tasks"></i></center></div>';
+    echo '<div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>Filter by Search : '.$_SESSION['scari'].' </H3> <br><a href="index.php?idtoko='.$_GET['idtoko'].'&halaman_produk=1&clear=y">>>Delete Filter By Search<<</a> <i class="fa fa-tasks"></i></center></div>';
 }else {
 echo'<div id="hightlight2"><i class="fa fa-tasks"></i>'; echo $nama_toko. " List Product (".mysqli_num_rows($jml_item)." Items)</div>"; }
     while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC))
