@@ -77,15 +77,15 @@ if ($total_rec>0){ // ** JIKA ADA DATA RECORD
 $kategori = $_GET['category'];
 if (!empty($_GET['category'])) {
     ?>
-    <div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>Filter Category <?php echo $kategori; ?></H3> <br><a href="index.php?clear=y">>>Delete Category<<</a> <i class="fa fa-tasks"></i></center></div>
+    <div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>Filter Category <?php echo $kategori; ?></H3> <br><a href="index.php?halaman_produk=1&clear=y">>>Delete Category<<</a> <i class="fa fa-tasks"></i></center></div>
     <?php
 } elseif($_SESSION['scari']) {
     ?>
-    <div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>Filter by Search : "<?php echo $_SESSION['scari']; ?>"</H3> <br><a href="index.php?clear=y">>>Delete Filter By Search<<</a> <i class="fa fa-tasks"></i></center></div>
+    <div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>Filter by Search : "<?php echo $_SESSION['scari']; ?>"</H3> <br><a href="index.php?halaman_produk=1&clear=y">>>Delete Filter By Search<<</a> <i class="fa fa-tasks"></i></center></div>
     <?php
 } else {
 ?>
-<div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>All Product List</H3> <br><a href="./android/7_panel_guest/index.php?clear=y">>>All Shop List<<</a> <i class="fa fa-tasks"></i></center></div>
+<div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>All Product List</H3> <br><a href="./android/7_panel_guest/index.php?halaman_toko=1&clear=y">>>All Shop List<<</a> <i class="fa fa-tasks"></i></center></div>
 <?php }
     while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC))
         {
