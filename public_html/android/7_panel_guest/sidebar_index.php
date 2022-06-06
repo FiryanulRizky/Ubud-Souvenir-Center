@@ -11,7 +11,7 @@ while ($rowcat = @mysqli_fetch_array($rcat,MYSQLI_ASSOC)) {
       echo"<div id='kategori'>";
          echo"<ul id=''>";
            echo "<li><i class='fa fa-check-square'></i>
-           <a href=\"index.php?halaman_produk=1&kategori=".$rowcat['nama_kategori']."\">".$rowcat['nama_kategori']. " </a>";
+           <a href=\"index.php?halaman_toko=1&kategori=".$rowcat['nama_kategori']."\">".$rowcat['nama_kategori']. " </a>";
            ?> </li>
 
 <?php
@@ -35,7 +35,7 @@ while($Qrek_tk=mysqli_fetch_array($Qrek)){
     $gambar_rek=$Qrek_tk['gambar_item'];
     $persen=$Qrek_tk['persen_support'];
     $support=$Qrek_tk['support_count'];
-    echo"<hr><a href=\"index.php?halaman_produk=1&merk=".$merk_rek."\"><center><img src=\"../../gambar/produk/".$gambar_rek."\" width=90 height=65 style='border-radius:50%;'><br><H3 style='color:black;'>$merk_rek</H3><b style='color:red;'>$persen % Top Sales</b><br><b style='color:blue;'>Favorite by $support Peoples</b></center></a>";}
+    echo"<hr><a href=\"index.php?halaman_toko=1&merk=".$merk_rek."\"><center><img src=\"../../gambar/produk/".$gambar_rek."\" width=90 height=65 style='border-radius:50%;'><br><H3 style='color:black;'>$merk_rek</H3><b style='color:red;'>$persen % Top Sales</b><br><b style='color:blue;'>Favorite by $support Peoples</b></center></a>";}
 } else {
   echo"<center><H3>NO DATA'S FOUND</H3></center>";
 } ?>
