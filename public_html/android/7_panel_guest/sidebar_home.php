@@ -3,16 +3,14 @@
 <div id="hightlight"><i class="fa fa-tasks"></i> Shop By Category</div>
 <div class="kiri_kategori">
 <?php
-echo"<form method='post' action='../../index.php'>";
 $rcat=mysqli_query($conn,"SELECT * FROM kategori,infotoko WHERE kategori.id_toko=infotoko.id_toko GROUP BY kategori.nama_kategori ORDER BY kategori.id_kategori ASC");
 
-    
 while ($rowcat = @mysqli_fetch_array($rcat,MYSQLI_ASSOC)) {
 
       echo"<div id='kategori'>";
          echo"<ul id=''>";
            echo "<li><i class='fa fa-check-square'></i>
-           <a href=\"../../index.php?category=".$rowcat['nama_kategori']."\">".$rowcat['nama_kategori']. " </a>";
+           <a href=\"../../index.php?halaman_produk=1&category=".$rowcat['nama_kategori']."\">".$rowcat['nama_kategori']. " </a>";
            ?> </li>
 
 <?php
@@ -20,12 +18,9 @@ while ($rowcat = @mysqli_fetch_array($rcat,MYSQLI_ASSOC)) {
          echo"</ul>";
        echo"</div>";
 }
-echo"</form>";
 echo"</div>";
 echo"<br>";
 ?>
-
-
 
 <div id="hightlight2"><i class="fa fa-user-plus"></i> #Top Sales</div>
 <div class="kiri">
@@ -38,12 +33,11 @@ while($Qrek_tk=mysqli_fetch_array($Qrek)){
     $gambar_rek=$Qrek_tk['gambar_item'];
     $persen=$Qrek_tk['persen_support'];
     $support=$Qrek_tk['support_count'];
-    echo"<a href=\"detail.php?id=".$kditem."&merk=".$merk_rek."&idtoko=".$Qrek_tk['id_toko']."\"><center><img src=\"../../gambar/produk/".$gambar_rek."\" width=90 height=65 style='border-radius:50%;'><br><H3 style='color:black;'>$merk_rek</H3><b style='color:red;'>$persen % Top Sales</b><br><b style='color:blue;'>Favorite by $support Peoples</b><hr></center></a>";}
+    echo"<hr><a href=\"detail.php?id=".$kditem."&merk=".$merk_rek."&idtoko=".$Qrek_tk['id_toko']."\"><center><img src=\"../../gambar/produk/".$gambar_rek."\" width=90 height=65 style='border-radius:50%;'><br><H3 style='color:black;'>$merk_rek</H3><b style='color:red;'>$persen % Top Sales</b><br><b style='color:blue;'>Favorite by $support Peoples</b></center></a>";}
 } else {
   echo"<center><H3>NO DATA'S FOUND</H3></center>";
 } ?>
 </div><br>
-
 
 <div id="hightlight2"><i class="fa fa-facebook-square"></i>#Facebook</div>
 <div class="kiri">
