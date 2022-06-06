@@ -15,17 +15,14 @@ mysqli_query($conn,"UPDATE infotoko SET visitors = visitors + 1  WHERE id_toko='
 //echo $sql;
 $result = mysqli_query($conn,"SELECT * FROM infotoko WHERE id_toko='".$_GET['idtoko']."'");
 
-
-
     // *** DISPLAY TABLE PRODUCTS
 echo '<div id=bgproduct_detail>';
 
     while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC))
         {
 
-
 echo'<div id="detail">';
- echo"<table><tr><td><a href='index.php'><i class='fa fa-home'></i> Shop List</a> &raquo; <a href=\"shop_detail.php?idtoko=".$_GET['idtoko']."\" class=\"tbeli\">Shop Detail</a> &raquo; KDTK".$row['id_toko']." &raquo; ".$row['nama_toko']."</table></td></tr>";
+ echo"<table><tr><td><a href='index.php?halaman_toko=1'><i class='fa fa-home'></i> Shop List</a> &raquo; <a href=\"shop_detail.php?idtoko=".$_GET['idtoko']."\" class=\"tbeli\">Shop Detail</a> &raquo; KDTK".$row['id_toko']." &raquo; ".$row['nama_toko']."</table></td></tr>";
    
 echo"</div>";  
      
@@ -52,11 +49,7 @@ echo'<table>';
      echo"</td>";	
      echo"</tr>";    
 echo"</table>";
-
- 
-
 echo"<div id='detail2'>";
-
 echo"<table id='tabledetail'>";
 echo"<div id='hightlight'><i class='fa fa-tasks'></i>Shop History</div>";
      echo"<tr>";
@@ -65,15 +58,11 @@ echo"<div id='hightlight'><i class='fa fa-tasks'></i>Shop History</div>";
      echo"</tr>";
 echo"</table>";
 echo"<br>";
-echo "<a href=\"../8_panel_penjualan/index.php?&idtoko=".$row['id_toko']."\" class=\"tambah\"><span><input type='button' value='VISIT SHOP' class='btn4'></span></a><br><br><a href=\"index.php?clear=y\" class=\"tambah\"><span><input type='button' value='BACK TO SHOP LIST' style='background-color:orange;' class='btn4'></span></a></div>";
+echo "<a href=\"../8_panel_penjualan/index.php?&idtoko=".$row['id_toko']."&halaman_toko=1\" class=\"tambah\"><span><input type='button' value='VISIT SHOP' class='btn4'></span></a><br><br><a href=\"index.php?clear=y\" class=\"tambah\"><span><input type='button' value='BACK TO SHOP LIST' style='background-color:orange;' class='btn4'></span></a></div>";
 }
 
 //include"produk_terkait.php";
 echo '</div>';
-
-
-
-
 echo '<div class="cleared"></div>';
 
 // *** LOAD PAGE FOOTER
@@ -82,5 +71,3 @@ include "../../header_session/footer.php";
 ?>
 </body>
 </html>
-
-
