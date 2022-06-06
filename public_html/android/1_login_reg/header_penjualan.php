@@ -54,8 +54,8 @@ date_default_timezone_set('Asia/Makassar');
 <div id="header_content">	<!--start header conteent-->
 	<ul>
 
-	  <li><?php echo"<a href=\"index.php?idtoko=".$_GET['idtoko']."&clear=y\"><img src=\"../../gambar/images/logo.png\"></a></li><li>";
-		  echo'<form method="post" action="index.php?idtoko='.$_GET['idtoko'].'">
+	  <li><?php echo"<a href=\"index.php?idtoko=".$_GET['idtoko']."&halaman_produk=1&clear=y\"><img src=\"../../gambar/images/logo.png\"></a></li><li>";
+		  echo'<form method="post" action="index.php?idtoko='.$_GET['idtoko'].'&halaman_produk=1">
 			     <input class="btncari" type="submit" value=""><input class="texbox_cari" name="cari" value="'.$_SESSION['scari'].'" placeholder="  Type Here to Search" >
 			   </form>';
 	   ?></li>
@@ -74,14 +74,14 @@ if(isset($_POST['ke_main'])) {
         var yakin = confirm("'.$total_quantity.' item still in cart, Sure to Abort it & Move to Main Menu ?");
 
         if (yakin) {
-        	window.location = "../../index.php?clear=y";
+        	window.location = "../../index.php?halaman_produk=1&clear=y";
         } else {
-            window.location = "'.$_SERVER['PHP_SELF'].'?idtoko='.$_GET['idtoko'].'&clear=y";
+            window.location = "'.$_SERVER['PHP_SELF'].'?idtoko='.$_GET['idtoko'].'&halaman_produk=1&clear=y";
         }
     </script>';
     }
     else {
-        echo'<script>window.location = "../../index.php?clear=y";</script>';
+        echo'<script>window.location = "../../index.php?halaman_produk=1&clear=y";</script>';
     }
 }
 ?>
