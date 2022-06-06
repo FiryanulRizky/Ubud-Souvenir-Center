@@ -36,7 +36,7 @@ while ($rowcat = @mysqli_fetch_array($rcat,MYSQLI_ASSOC)) {
       echo"<div id='kategori'>";
          echo"<ul id=''>";
            echo "<li><i class='fa fa-check-square'></i>
-           <a href=\"index.php?idtoko=".$_GET['idtoko']."&category=".$rowcat['nama_kategori']."\">".$rowcat['nama_kategori']. " </a>";
+           <a href=\"index.php?idtoko=".$_GET['idtoko']."&halaman_produk=1&category=".$rowcat['nama_kategori']."\">".$rowcat['nama_kategori']. " </a>";
            ?> </li>
 <?php
          echo"</ul>";
@@ -67,7 +67,7 @@ while ($rowcat = @mysqli_fetch_array($rcat,MYSQLI_ASSOC)) {
       echo"<div id='kategori'>";
          echo"<ul id=''>";
            echo "<li><i class='fa fa-check-square'></i>
-           <a href=\"index.php?idtoko=".$_GET['idtoko']."&category=".$rowcat['nama_kategori']."\">".$rowcat['nama_kategori']. " </a>";
+           <a href=\"index.php?idtoko=".$_GET['idtoko']."&halaman_produk=1&category=".$rowcat['nama_kategori']."\">".$rowcat['nama_kategori']. " </a>";
            ?> </li>
 
 <?php
