@@ -21,8 +21,8 @@ if ($_GET['clear']=="y"){ unset($_SESSION['scari']); unset($_SESSION['scategory'
 }
 
 // ***  DEKLARASI VARIABLE
-if (!empty($_GET['page'])) $_SESSION['page']=$_GET['page'];
-if (!empty($_SESSION['page'])) $_GET['page']=$_SESSION['page'];
+if (!empty($_GET['halaman_produk'])) $_SESSION['halaman_produk']=$_GET['halaman_produk'];
+if (!empty($_SESSION['halaman_produk'])) $_GET['halaman_produk']=$_SESSION['halaman_produk'];
 if (!empty($_POST['category'])) $_SESSION['scategory']=$_POST['category'];
 if (!empty($_GET['category'])) $_SESSION['scategory']=$_GET['category'];
 if (!empty($_POST['cari'])) $_SESSION['scari']=$_POST['cari'];
@@ -40,33 +40,33 @@ $qry_t.="( merk LIKE '%".$_SESSION['scari']."%' ";
 $qry_t.="OR jenis LIKE '%".$_SESSION['scari']."%' ";
 $qry_t.="OR deskripsi LIKE '%".$_SESSION['scari']."%') ";
 
-$rowperpage=100; // *** DISPLAY NUM RECORD PER PAGE
+$rowperpage=12; // *** TAMPIL NUM RECORD PER PAGE
 
 // ** predefine record number
-if (!empty($_GET['page'])) $recno=($_GET['page']-1)*$rowperpage; else $recno=0;
+if (!empty($_GET['halaman_produk'])) $recno=($_GET['halaman_produk']-1)*$rowperpage; else $recno=0;
 
-// QUERY TABLE php_shop_products n record per page
-//echo $sql;
+// QUERY TABLE item dan record per halaman
 $result = mysqli_query($conn,"SELECT * FROM item ".$qry_t." GROUP BY merk ORDER BY views DESC LIMIT $recno,$rowperpage");
-$ada = @mysqli_num_rows($result);
+$rec = mysqli_query($conn,"SELECT * FROM item ".$qry_t."");
+$total_rec = @mysqli_num_rows($rec);
 $no=0;
 
-if ($ada>0){ // ** IF RECORD EXISTS
+if ($total_rec>0){ // ** JIKA ADA DATA RECORD 
 
     // ** PAGING NAVIGATION
-    if ($total_rec>$rowperpage){ // *** IF TOTAL RECORD GREATER THAN RECORD PER PAGE => SHOW PAGING
+    if ($total_rec>$rowperpage){ // *** JIKA TOTAL RECORD LEBIH BESAR RECORD PER PAGE => TAMPIL PAGE
     $paging_html.= '<div id="paging">';
-    if (empty($_GET['page'])) $_GET['page']=1; // ** SET DEFAULT PAGE = 1
+    if (empty($_GET['halaman_produk'])) $_GET['halaman_produk']=1; // ** SET DEFAULT PAGE = 1
     // *** PREV RECORD LINK
-    if ($_GET['page']>1) $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?page='.($_GET['page']-1).'">&laquo;prev</a>';
+    if ($_GET['halaman_produk']>1) $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?halaman_produk='.($_GET['halaman_produk']-1).'">&laquo;prev</a>';
     // *** PAGING NUMBERS LINK
-    for ($i=1; $i<= ceil($total_rec/$rowperpage); $i++){
-        $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?page='.$i.'"';
-        if ($_GET['page']==$i) $paging_html.= ' class="paging_cur" ';
+    for ($i=1; $i< ceil($total_rec/$rowperpage); $i++){
+        $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?halaman_produk='.$i.'"';
+        if ($_GET['halaman_produk']==$i) $paging_html.= ' class="paging_cur" ';
         $paging_html.= '>'.$i.'</a>';
     }
     // *** NEXT RECORD LINK
-    if ($_GET['page']<ceil($total_rec/$rowperpage)) $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?page='.($_GET['page']+1).'">next&raquo;</a> ';
+    if ($_GET['halaman_produk']< ceil($total_rec/$rowperpage)-1) $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?halaman_produk='.($_GET['halaman_produk']+1).'">next&raquo;</a> ';
     $paging_html.= '</div><!-- id="paging" -->';
     } // *** end if ($total_rec>$rowperpage)
 
