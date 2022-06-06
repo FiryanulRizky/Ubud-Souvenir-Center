@@ -63,15 +63,15 @@ if ($total_rec>0){ // ** JIKA ADA DATA RECORD
     $paging_html.= '<div id="paging">';
     if (empty($_GET['halaman_produk'])) $_GET['halaman_produk']=1; // ** SET DEFAULT PAGE = 1
     // *** PREV RECORD LINK
-    if ($_GET['halaman_produk']>1) $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?halaman_produk='.($_GET['halaman_produk']-1).'">&laquo;prev</a>';
+    if ($_GET['halaman_produk']>1) $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?idtoko='.$_GET['idtoko'].'&halaman_produk='.($_GET['halaman_produk']-1).'">&laquo;prev</a>';
     // *** PAGING NUMBERS LINK
-    for ($i=1; $i< ceil($total_rec/$rowperpage); $i++){
-        $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?halaman_produk='.$i.'"';
+    for ($i=1; $i<= ceil($total_rec/$rowperpage); $i++){
+        $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?idtoko='.$_GET['idtoko'].'&halaman_produk='.$i.'"';
         if ($_GET['halaman_produk']==$i) $paging_html.= ' class="paging_cur" ';
         $paging_html.= '>'.$i.'</a>';
     }
     // *** NEXT RECORD LINK
-    if ($_GET['halaman_produk']< ceil($total_rec/$rowperpage)-1) $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?halaman_produk='.($_GET['halaman_produk']+1).'">next&raquo;</a> ';
+    if ($_GET['halaman_produk']< ceil($total_rec/$rowperpage)) $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?idtoko='.$_GET['idtoko'].'&halaman_produk='.($_GET['halaman_produk']+1).'">next&raquo;</a> ';
     $paging_html.= '</div><!-- id="paging" -->';
     } // *** end if ($total_rec>$rowperpage)
 $jml_item=mysqli_query($conn,"SELECT * FROM item WHERE id_toko='".$_GET['idtoko']."'");
