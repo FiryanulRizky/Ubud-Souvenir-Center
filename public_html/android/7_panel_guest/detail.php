@@ -27,7 +27,7 @@ echo '<div id=bgproduct_detail>';
 
 
 echo'<div id="detail">';
- echo"<table><tr><td><a href='../../index.php'><i class='fa fa-home'></i> Home</a> &raquo; Product Detail &raquo; ".$row['jenis']." &raquo; ".$row['merk']."</table></td></tr>";
+ echo"<table><tr><td><a href='../../index.php?halaman_produk=1'><i class='fa fa-home'></i> Home</a> &raquo; Product Detail &raquo; ".$row['jenis']." &raquo; ".$row['merk']."</table></td></tr>";
    
 echo"</div>";  
 $cektoko=mysqli_query($conn,"SELECT * FROM infotoko,item WHERE item.id_toko=infotoko.id_toko AND item.merk='".$_GET['merk']."' ORDER BY item.id_item ASC");
@@ -79,15 +79,11 @@ if (mysqli_num_rows($cek_nama_duplikat)==1)
   if ($qr['status']!="Active") {   
   echo "".$merk_duplikat['deskripsi']."<br><a href=\"status_toko.php?idtoko=".$merk_duplikat['id_toko']."&id=".$merk_duplikat['kditem']."&merk=".$merk_duplikat['merk']."\" class=\"tambah\"><span><input type='button' value='VISIT SHOP TO BUY' class='btn4'></span></a><br><br>";
       } else {
-  echo "".$merk_duplikat['deskripsi']."<br><a href=\"../8_panel_penjualan/index.php?&idtoko=".$merk_duplikat['id_toko']."\" class=\"tambah\"><span><input type='button' value='VISIT SHOP TO BUY' class='btn4'></span></a><br><br>";}
+  echo "".$merk_duplikat['deskripsi']."<br><a href=\"../8_panel_penjualan/index.php?&idtoko=".$merk_duplikat['id_toko']."&halaman_produk=1\" class=\"tambah\"><span><input type='button' value='VISIT SHOP TO BUY' class='btn4'></span></a><br><br>";}
 }
-echo "<a href=\"../../index.php?clear=y\" class=\"tambah\"><span><input type='button' value='BACK TO MENU' style='background-color:orange;' class='btn4'></span></a></div>";
+echo "<a href=\"../../index.php?halaman_produk=1&clear=y\" class=\"tambah\"><span><input type='button' value='BACK TO MENU' style='background-color:orange;' class='btn4'></span></a></div>";
 }
 echo '</div>';
-
-
-
-
 echo '<div class="cleared"></div>';
 
 // *** LOAD PAGE FOOTER
@@ -96,5 +92,3 @@ include "../header_session/footer.php";
 ?>
 </body>
 </html>
-
-
