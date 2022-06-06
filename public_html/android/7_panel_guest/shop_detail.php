@@ -58,7 +58,7 @@ echo"<div id='hightlight'><i class='fa fa-tasks'></i>Shop History</div>";
      echo"</tr>";
 echo"</table>";
 echo"<br>";
-echo "<a href=\"../8_panel_penjualan/index.php?&idtoko=".$row['id_toko']."&halaman_toko=1\" class=\"tambah\"><span><input type='button' value='VISIT SHOP' class='btn4'></span></a><br><br><a href=\"index.php?clear=y\" class=\"tambah\"><span><input type='button' value='BACK TO SHOP LIST' style='background-color:orange;' class='btn4'></span></a></div>";
+echo "<a href=\"../8_panel_penjualan/index.php?&idtoko=".$row['id_toko']."&halaman_toko=1\" class=\"tambah\"><span><input type='button' value='VISIT SHOP' class='btn4'></span></a><br><br><a href=\"index.php?halaman_toko=1&clear=y\" class=\"tambah\"><span><input type='button' value='BACK TO SHOP LIST' style='background-color:orange;' class='btn4'></span></a></div>";
 }
 
 //include"produk_terkait.php";
