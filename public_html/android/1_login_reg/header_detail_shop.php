@@ -71,9 +71,9 @@ date_default_timezone_set('Asia/Makassar');
 <div id="header_content">	<!--start header conteent-->
 	<ul>
 	
-	  <li><a href="../7_panel_guest/index.php?clear=y"><img src="../../gambar/images/logo.png"></a></li>
+	  <li><a href="../7_panel_guest/index.php?halaman_toko=1&clear=y"><img src="../../gambar/images/logo.png"></a></li>
 	  <li> <?php
-		  echo'<form method="post" action="../7_panel_guest/index.php">
+		  echo'<form method="post" action="../7_panel_guest/index.php?halaman_toko=1">
 			     <input class="btncari" type="submit" value=""><input class="texbox_cari" name="cari" value="'.$_SESSION['scari'].'" placeholder="  Type Here to Search" >
 			   </form>';
 	   ?></li><li style="margin-top:15px;font-size:24px;border:1px solid orange;padding:10px;"><a href="../7_panel_guest/cara_belanja_index.php"><i class="fa fa-pencil-square-o"></i> How to Order</a></li>
