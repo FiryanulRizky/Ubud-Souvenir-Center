@@ -85,17 +85,17 @@ $kategori = $_GET['kategori'];
 $merk = $_GET['merk'];
 if (!empty($_GET['kategori'])) {
     ?>
-    <div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>Filter Category <?php echo $kategori; ?></H3> <br><a href="index.php?clear=y">>>Delete Category<<</a> <i class="fa fa-tasks"></i></center></div>
+    <div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>Filter Category <?php echo $kategori; ?></H3> <br><a href="index.php?halaman_toko=1&clear=y">>>Delete Category<<</a> <i class="fa fa-tasks"></i></center></div>
     <?php
 } elseif($_SESSION['scari']) { 
-    echo '<div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>Filter by Search : '.$_SESSION['scari'].' </H3> <br><a href="index.php?clear=y">>>Delete Filter By Search<<</a> <i class="fa fa-tasks"></i></center></div>';
+    echo '<div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>Filter by Search : '.$_SESSION['scari'].' </H3> <br><a href="index.php?halaman_toko=1&clear=y">>>Delete Filter By Search<<</a> <i class="fa fa-tasks"></i></center></div>';
 } elseif(!empty($merk)) {
     ?>
-    <div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>Shop by Selling  <?php echo $merk; ?></H3> <br><a href="index.php?clear=y">>>Delete Filter<<</a> <i class="fa fa-tasks"></i></center></div>
+    <div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>Shop by Selling  <?php echo $merk; ?></H3> <br><a href="index.php?halaman_toko=1&clear=y">>>Delete Filter<<</a> <i class="fa fa-tasks"></i></center></div>
     <?php
 } else {
 ?>
-<div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>All Shop List</H3> <br><a href="../../index.php?clear=y">>>Chek All Products<<</a> <i class="fa fa-tasks"></i></center></div>
+<div id="hightlight2"><center><i class="fa fa-tasks"></i> <H3>All Shop List</H3> <br><a href="../../index.php?halaman_produk=1&clear=y">>>Chek All Products<<</a> <i class="fa fa-tasks"></i></center></div>
 <?php }
     while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC))
         {
@@ -177,8 +177,7 @@ if (!empty($_GET['kategori'])) {
           echo "<a href=\"shop_detail.php?idtoko=".$row['id_toko']."\" class=\"tbeli\"><span>
           <input type='button' class='btn_cart' value='GO TO SHOP'></span></a>";
           echo'</td></tr>'; }
-          
-
+       
           echo'</table>';
 		  echo"</a>";
         echo'</div>';
