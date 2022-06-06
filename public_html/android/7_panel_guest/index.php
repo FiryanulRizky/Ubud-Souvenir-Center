@@ -17,13 +17,11 @@ if ($_GET['clear']=="y"){ unset($_SESSION['scari']); unset($_SESSION['scategory'
 }
 
 // ***  DEKLARASI VARIABLE
-if (!empty($_GET['page'])) $_SESSION['page']=$_GET['page'];
-if (!empty($_SESSION['page'])) $_GET['page']=$_SESSION['page'];
+if (!empty($_GET['halaman_toko'])) $_SESSION['halaman_toko']=$_GET['halaman_toko'];
+if (!empty($_SESSION['halaman_toko'])) $_GET['halaman_toko']=$_SESSION['halaman_toko'];
 if (!empty($_POST['category'])) $_SESSION['scategory']=$_POST['category'];
 if (!empty($_GET['category'])) $_SESSION['scategory']=$_GET['category'];
 if (!empty($_POST['cari'])) $_SESSION['scari']=$_POST['cari'];
-
-
 
 // *** DEFAULT VARIABLE SETTING
 $line_cost=0; // *** CART - SUBTOTAL COST
@@ -42,13 +40,12 @@ $qry_t3.="WHERE kategori.id_toko=infotoko.id_toko AND  kategori.nama_kategori='"
 $qry_t4.="WHERE item .id_toko=infotoko.id_toko AND  item.merk='".$_GET['merk']."'";
 
 
-$rowperpage=100; // *** DISPLAY NUM RECORD PER PAGE
+$rowperpage=4; // *** TAMPIL NUM RECORD PER PAGE
 
 // ** predefine record number
-if (!empty($_GET['page'])) $recno=($_GET['page']-1)*$rowperpage; else $recno=0;
+if (!empty($_GET['halaman_toko'])) $recno=($_GET['halaman_toko']-1)*$rowperpage; else $recno=0;
 
-// QUERY TABLE php_shop_products n record per page
-//echo $sql;
+// QUERY TABLE infotoko dan record per halaman
 if (!empty($_GET['idtoko'])) {
   $result = mysqli_query($conn,"SELECT * FROM infotoko ".$qry_t2." ORDER BY visitors DESC LIMIT $recno,$rowperpage");
 } elseif (!empty($_GET['kategori'])) {
@@ -57,31 +54,31 @@ if (!empty($_GET['idtoko'])) {
   $result = mysqli_query($conn,"SELECT * FROM item,infotoko ".$qry_t4." ORDER BY infotoko.visitors DESC LIMIT $recno,$rowperpage"); 
 } else {
 $result = mysqli_query($conn,"SELECT * FROM infotoko ".$qry_t." ORDER BY visitors DESC LIMIT $recno,$rowperpage");}
-$ada = @mysqli_num_rows($result);
+$rec = mysqli_query($conn,"SELECT * FROM infotoko ".$qry_t."");
+$total_rec = @mysqli_num_rows($rec);
 $no=0;
 
-if ($ada>0){ // ** IF RECORD EXISTS
+if ($total_rec>0){ // ** JIKA ADA DATA RECORD 
 
     // ** PAGING NAVIGATION
-    if ($total_rec>$rowperpage){ // *** IF TOTAL RECORD GREATER THAN RECORD PER PAGE => SHOW PAGING
+    if ($total_rec>$rowperpage){ // *** JIKA TOTAL RECORD LEBIH BESAR RECORD PER PAGE => TAMPIL PAGE
     $paging_html.= '<div id="paging">';
-    if (empty($_GET['page'])) $_GET['page']=1; // ** SET DEFAULT PAGE = 1
+    if (empty($_GET['halaman_toko'])) $_GET['halaman_toko']=1; // ** SET DEFAULT PAGE = 1
     // *** PREV RECORD LINK
-    if ($_GET['page']>1) $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?page='.($_GET['page']-1).'">&laquo;prev</a>';
+    if ($_GET['halaman_toko']>1) $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?halaman_toko='.($_GET['halaman_toko']-1).'">&laquo;prev</a>';
     // *** PAGING NUMBERS LINK
-    for ($i=1; $i<= ceil($total_rec/$rowperpage); $i++){
-        $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?page='.$i.'"';
-        if ($_GET['page']==$i) $paging_html.= ' class="paging_cur" ';
+    for ($i=1; $i< ceil($total_rec/$rowperpage); $i++){
+        $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?halaman_toko='.$i.'"';
+        if ($_GET['halaman_toko']==$i) $paging_html.= ' class="paging_cur" ';
         $paging_html.= '>'.$i.'</a>';
     }
     // *** NEXT RECORD LINK
-    if ($_GET['page']<ceil($total_rec/$rowperpage)) $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?page='.($_GET['page']+1).'">next&raquo;</a> ';
+    if ($_GET['halaman_toko']< ceil($total_rec/$rowperpage)-1) $paging_html.= '<a href="'.$_SERVER['PHP_SELF'].'?halaman_toko='.($_GET['halaman_toko']+1).'">next&raquo;</a> ';
     $paging_html.= '</div><!-- id="paging" -->';
     } // *** end if ($total_rec>$rowperpage)
 
 ?>
 
-    
 <div id="bgproduct">
 <?php 
 $kategori = $_GET['kategori'];
