@@ -2,7 +2,7 @@
 <div id="hightlight"><i class="fa fa-tasks"></i> Shop By Category</div>
 <div class="kiri_kategori">
 <?php
-echo"<form method='post' action='./index.php'>";
+echo"<form method='post' action='./index.php?halaman_produk=1'>";
 $rcat=mysqli_query($conn,"SELECT * FROM kategori,infotoko WHERE kategori.id_toko=infotoko.id_toko GROUP BY kategori.nama_kategori ORDER BY kategori.id_kategori ASC");
 
 while ($rowcat = @mysqli_fetch_array($rcat,MYSQLI_ASSOC)) {
@@ -10,7 +10,7 @@ while ($rowcat = @mysqli_fetch_array($rcat,MYSQLI_ASSOC)) {
       echo"<div id='kategori'>";
          echo"<ul id=''>";
            echo "<li><i class='fa fa-check-square'></i>
-           <a href=\"./index.php?category=".$rowcat['nama_kategori']."\">".$rowcat['nama_kategori']. " </a>";
+           <a href=\"./index.php?halaman_produk=1&category=".$rowcat['nama_kategori']."\">".$rowcat['nama_kategori']. " </a>";
            ?> </li>
 
 <?php
